@@ -975,13 +975,13 @@ body.offcanvas .colorlib-nav-toggle {
 	padding: 0;
 }
 
-<!-----projectcss------------>#projects {
+<!-----projectcss------------>#certifications {
 	padding: 50px 15px;
 	border-bottom: 1px solid #dcd9d9;
 	text-align: center;
 }
 
-#projects h2 {
+#certifications h2 {
 	color: #374054;
 	margin-bottom: 50px;
 }
@@ -1032,7 +1032,7 @@ body.offcanvas .colorlib-nav-toggle {
 	transform: none;
 }
 
-#more-projects {
+#more-certifications {
 	display: none;
 }
 
@@ -2489,7 +2489,11 @@ ul {
  -----------------------------*/
 
 .submenu {
-	display: grid;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	/* Adjust the minmax() values as needed */
 	gap: 10px;
@@ -2692,4 +2696,89 @@ footer ul {
 	padding-bottom: 10px;
 	text-align: right;
 	font-weight: 600;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background: #f8f9fa; /* light grey background */
+}
+
+.skill-item {
+    text-align: center;
+    flex-basis: 20%; /* adjust this to change how many items per row */
+    margin-bottom: 20px;
+	flex-direction: column;
+
+}
+
+.skill-logo {
+    width: 100px; /* fixed width for logos */
+    height: auto; /* maintain aspect ratio */
+    margin-bottom: 10px; /* space between logo and text */
+}
+
+.skill-name {
+    font-weight: bold;
+    color: #333; /* dark grey for text */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.skill-description {
+    color: #666; /* lighter text for descriptions */
+    font-size: 0.8em; /* smaller text for descriptions */
+}
+/* Styling for the certifications section */
+
+.colorlib-narrow-content {
+    margin: 0 auto;
+    width: 80%; /* Adjust width as necessary */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.accordion .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: none; /* Initially hidden */
+    border-top: none; /* Smooth connection with the toggle */
+}
+
+.project-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.project-card:last-child {
+    border-bottom: none;
+}
+
+.img-fluid {
+    max-width: 100px; /* Ensures images are not too large */
+    margin-right: 10px;
+}
+
+.certifications-heading {
+    flex-grow: 1; /* Allows the title to fill available space */
+    padding: 0 10px;
+}
+
+.resume-content {
+    display: flex;
+    align-items: center;
+}
+
+.certification-img {
+	width: 100px;
+    height: auto;
+
 }

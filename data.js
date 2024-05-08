@@ -16,12 +16,12 @@ export const languages = [
         skillName: "English ",
         color: "1",
         percentage: "100",
-    },{
+    }, {
         title: "Spanish Communication",
         skillName: "Spanish",
         color: "2",
         percentage: "100",
-    },{
+    }, {
         title: "Dutch Communication",
         skillName: "Dutch",
         color: "3",
@@ -29,119 +29,167 @@ export const languages = [
     }
 ];
 
-export const skills = [
-    {
-        title: "Programming Languages",
-        skillName: "Java, Python, JavaScript",
-        color: "1",
-        percentage: "90",
-    },
-    {
-        title: "Automation Tools",
-        skillName: "Selenium, Postman, TestRail",
-        color: "2",
-        percentage: "95",
-    },
-    {
-        title: "Web Development",
-        skillName: "HTML, CSS, JavaScript",
-        color: "3",
-        percentage: "20",
-    },
-    {
-        title: "Database Management",
-        skillName: "MongoDB, SQL",
-        color: "4",
-        percentage: "50",
-    },
-    {
-        title: "API Testing",
-        skillName: "Postman, Charles Proxy",
-        color: "5",
-        percentage: "60",
-    },
-    {
-        title: "Version Control",
-        skillName: "Git, Subversion",
-        color: "8",
-        percentage: "85",
-    },
-    {
-        title: "CI/CD Tools",
-        skillName: "Jenkins, GitLab CI/CD",
-        color: "9",
-        percentage: "30",
-    }
-];
+export const skills = {
+    "Programming and Scripting Languages": [
+        {
+            "skillName": "Java",
+            "imagePath": "images/skills/java_logo.png",
+        },
+        {
+            "skillName": "Python",
+            "imagePath": "images/skills/python_logo.png",
+        },
+        {
+            "skillName": "JavaScript",
+            "imagePath": "images/skills/javascript_logo.png",
+        },
+        {
+            "skillName": "HTML",
+            "imagePath": "images/skills/html_logo.png",
+        },
+        {
+            "skillName": "CSS",
+            "imagePath": "images/skills/css_logo.png",
+        },
+        {
+            "skillName": "C++",
+            "imagePath": "images/skills/c++_logo.png",
+        }
+    ],
+    "Database Management Systems": [
+        {
+            "skillName": "MySQL",
+            "imagePath": "images/skills/mysql_logo.png",
+            "description": "A relational database management system used for storing and retrieving data efficiently."
+        },
+        {
+            "skillName": "MongoDB",
+            "imagePath": "images/skills/mongodb_logo.png",
+            "description": "A NoSQL database used for high-volume data storage."
+        }
+    ],
+    "Testing and Automation Tools": [
+        {
+            "skillName": "Selenium",
+            "imagePath": "images/skills/selenium_logo.png",
+            "description": "Automates web browsers, facilitating robust and repeatable test scenarios."
+        },
+        {
+            "skillName": "Postman",
+            "imagePath": "images/skills/postman_logo.png",
+            "description": "Employed for API testing to ensure the reliability and scalability of backend services."
+        }, {
+            "skillName": "Charles Proxy",
+            "imagePath": "images/skills/charles_proxy_logo.png",
+            "description": "Used for traffic management and SSL pinning, enhancing security and network reliability."
+        }, {
+            "skillName": "Pandas",
+            "imagePath": "images/skills/pandas_logo.png",
+            "description": "Facilitates data manipulation and analysis, enabling complex data workflows in Python environments."
+        }
+    ],
+    "Version Control and CI/CD Tools": [
+        {
+            "skillName": "Git",
+            "imagePath": "images/skills/git_logo.png",
+            "description": "Version control system to track changes in source code during software development."
+        },
+        {
+            "skillName": "Jenkins",
+            "imagePath": "images/skills/jenkins_logo.png",
+            "description": "An open-source automation server used to automate all sorts of tasks related to building, testing, and delivering or deploying software."
+        }
+    ]
+};
 
-
-
-export const projects = {
+export const certifications = {
 
     Test_Automation_University_TAU: [
+
         {
-            certificationName: "TAU Foundations for QA Automation",
-            image: "images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_Funadations_for_QA_Automation.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_Funadations_for_QA_Automation.jpg"
-        },
-        {
-            certificationName: "TAU IntelliJ for QA Automation",
-            image: "images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_InteliJ_For_QA_Automation.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_InteliJ_For_QA_Automation.jpg"
-        },
-        {
-            certificationName: "TAU API Testing Python",
-            image: "images/Certifications/Mentormate/Test_Automation_University/TAU_APITestingPython_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_APITestingPython_Certificate.jpg"
-        },
-        {
-            certificationName: "TAU Continuous Integration Jenkins",
-            image: "images/Certifications/Mentormate/Test_Automation_University/TAU_ContinuousIntegrationJenkins_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_ContinuousIntegrationJenkins_Certificate.jpg"
-        },
-        {
-            certificationName: "TAU Introduction to TestNG",
-            image: "images/Certifications/Mentormate/Test_Automation_University/TAU_IntroductionToTestNG_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_IntroductionToTestNG_Certificate.jpg"
-        },
-        {
-            certificationName: "TAU Java Programming",
+            certificationName: "Java Programming",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_JavaProgramming_Certificate.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_JavaProgramming_Certificate.jpg"
         },
         {
-            certificationName: "TAU Python Programming",
+            certificationName: "Python Programming",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_PythonProgramming_Certificate.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_PythonProgramming_Certificate.jpg"
         },
         {
-            certificationName: "TAU Selenium WebDriver Java",
+            certificationName: "Foundations for QA Automation",
+            image: "images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_Funadations_for_QA_Automation.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_Funadations_for_QA_Automation.jpg"
+        },
+        {
+            certificationName: "IntelliJ for QA Automation",
+            image: "images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_InteliJ_For_QA_Automation.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_InteliJ_For_QA_Automation.jpg"
+        },
+        {
+            certificationName: "API Testing Python",
+            image: "images/Certifications/Mentormate/Test_Automation_University/TAU_APITestingPython_Certificate.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_APITestingPython_Certificate.jpg"
+        },
+        {
+            certificationName: "Introduction to TestNG",
+            image: "images/Certifications/Mentormate/Test_Automation_University/TAU_IntroductionToTestNG_Certificate.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_IntroductionToTestNG_Certificate.jpg"
+        },
+        {
+            certificationName: "WebElement Locator Strategies",
+            image: "images/Certifications/Mentormate/Test_Automation_University/TAU_WebElementLocatorStrategies_Certificate.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_WebElementLocatorStrategies_Certificate.jpg"
+        },
+        {
+            certificationName: "Selenium WebDriver Java",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverJava_Certificate.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverJava_Certificate.jpg"
         },
         {
-            certificationName: "TAU Selenium WebDriver Python",
+            certificationName: "Selenium WebDriver Python",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverPython_Certificate.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverPython_Certificate.jpg"
         },
         {
-            certificationName: "TAU Setting Foundation for Test Automation",
-            image: "images/Certifications/Mentormate/Test_Automation_University/TAU_SettingFoundationTestAutomation_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_SettingFoundationTestAutomation_Certificate.jpg"
+            certificationName: "Continuous Integration Jenkins",
+            image: "images/Certifications/Mentormate/Test_Automation_University/TAU_ContinuousIntegrationJenkins_Certificate.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_ContinuousIntegrationJenkins_Certificate.jpg"
         },
         {
-            certificationName: "TAU Source Control with Git",
+            certificationName: "Source Control with Git",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_SourceControlGit_Certificate.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_SourceControlGit_Certificate.jpg"
-        },
-        {
-            certificationName: "TAU WebElement Locator Strategies",
-            image: "images/Certifications/Mentormate/Test_Automation_University/TAU_WebElementLocatorStrategies_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_WebElementLocatorStrategies_Certificate.jpg"
         }
     ],
-    
+
     LinkedInLearning: [
+
+        {
+            certificationName: "Learning Python",
+            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Python.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Python.jpg"
+        },
+        {
+            certificationName: "Python Essential Training",
+            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Python_Essential_Training.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Python_Essential_Training.jpg"
+        },
+        {
+            certificationName: "Learning C",
+            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_C.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_C.jpg"
+        },
+        {
+            certificationName: "Learning Java 11",
+            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Java_11.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Java_11.jpg"
+        },
+        {
+            certificationName: "Learning SQL Programming",
+            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_SQL_Programming.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_SQL_Programming.jpg"
+        },
         {
             certificationName: "HTML Essential Training",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_HTML_Essential_Training.jpg",
@@ -163,39 +211,9 @@ export const projects = {
             preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Succeeding_in_Web_Development_Full_Stack_and_Front_End.jpg"
         },
         {
-            certificationName: "Installing Apache, MySQL, and PHP",
-            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Installing_Apache_MySQL_and_PHP.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Installing_Apache_MySQL_and_PHP.jpg"
-        },
-        {
             certificationName: "Programming Foundations: Web Security 2019",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Programming_Foundations_Web_Security_2019.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Programming_Foundations_Web_Security_2019.jpg"
-        },
-        {
-            certificationName: "Learning Python",
-            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Python.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Python.jpg"
-        },
-        {
-            certificationName: "Learning Java 11",
-            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Java_11.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Java_11.jpg"
-        },
-        {
-            certificationName: "Learning SQL Programming",
-            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_SQL_Programming.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_SQL_Programming.jpg"
-        },
-        {
-            certificationName: "Learning C",
-            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_C.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_C.jpg"
-        },
-        {
-            certificationName: "Python Essential Training",
-            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Python_Essential_Training.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Python_Essential_Training.jpg"
         },
         {
             certificationName: "API Testing Foundations",
@@ -228,27 +246,17 @@ export const projects = {
             preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Career_Essentials_in_Software_Development_by_Microsoft_and_LinkedIn.jpg"
         },
         {
-            certificationName: "Finding a Remote Job",
-            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Finding_a_Remote_Job.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Finding_a_Remote_Job.jpg"
-        },
-        {
             certificationName: "Introduction to Career languages in Software Development",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Introduction_to_Career_Skills_in_Software_Development.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Introduction_to_Career_Skills_in_Software_Development.jpg"
-        },
-        {
-            certificationName: "GPT-4: The New GPT Release and What You Need to Know",
-            image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_GPT4_The_New_GPT_Release_and_What_You_Need_to_Know.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_GPT4_The_New_GPT_Release_and_What_You_Need_to_Know.jpg"
         },
         {
             certificationName: "Problem Solving Techniques",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_ProblemSolving_Techniques.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_ProblemSolving_Techniques.jpg"
         },
-    ],      
-    
+    ],
+
     technicalCertifications: [
         {
             certificationName: "ETYC Interactive Robotics Programming Workshop 2022",
@@ -283,21 +291,6 @@ export const projects = {
     ],
     educationalCertifications: [
         {
-            certificationName: "Agile Course Certificate",
-            image: "images/Certifications/Personal/Agile_Course_certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Personal/Agile_Course_certificate.jpg"
-        },
-        {
-            certificationName: "Advanced English Proficiency Certificate BECAL Scholarship 2022",
-            image: "images/Certifications/Personal/Ivan_Weiss_Advanced_English_Proficiency_Certificate_BECAL_Scholarship_2022.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Personal/Ivan_Weiss_Advanced_English_Proficiency_Certificate_BECAL_Scholarship_2022.jpg"
-        },
-        {
-            certificationName: "NASA International Space Apps Challenge",
-            image: "images/Certifications/Personal/NASA_International_Space_Apps_Challenge.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Personal/NASA_International_Space_Apps_Challenge.jpg"
-        },
-        {
             certificationName: "FPUNA Grades 1",
             image: "images/Certifications/FP_UNA/FPUNA_grades-1.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/FP_UNA/FPUNA_grades-1.jpg"
@@ -311,6 +304,21 @@ export const projects = {
             certificationName: "ISTQB Foundation Level",
             image: "images/Certifications/Mentormate/Certificate-8e85e79dd27d41078da9908a53aaedb8_page-0001.jpg",
             preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Certificate-8e85e79dd27d41078da9908a53aaedb8_page-0001.jpg"
+        },
+        {
+            certificationName: "Advanced English Proficiency Certificate BECAL Scholarship 2022",
+            image: "images/Certifications/Personal/Ivan_Weiss_Advanced_English_Proficiency_Certificate_BECAL_Scholarship_2022.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/Personal/Ivan_Weiss_Advanced_English_Proficiency_Certificate_BECAL_Scholarship_2022.jpg"
+        },
+        {
+            certificationName: "NASA International Space Apps Challenge",
+            image: "images/Certifications/Personal/NASA_International_Space_Apps_Challenge.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/Personal/NASA_International_Space_Apps_Challenge.jpg"
+        },
+        {
+            certificationName: "Agile Course Certificate",
+            image: "images/Certifications/Personal/Agile_Course_certificate.jpg",
+            preview: "http://127.0.0.1:5500/images/Certifications/Personal/Agile_Course_certificate.jpg"
         }
     ]
 }
@@ -367,7 +375,7 @@ export const education = [
         subtitle: "Facultad Politécnica de la Universidad Nacional de Asunción (FP-UNA)",
         details: [
             "Completed a rigorous curriculum encompassing a wide range of computer science disciplines from fundamental theories to practical applications.",
-            "Engaged in academic competitions and collaborative projects that enhanced languages in teamwork, problem-solving, and innovation, achieving top placements in national and international contests.",
+            "Engaged in academic competitions and collaborative certifications that enhanced languages in teamwork, problem-solving, and innovation, achieving top placements in national and international contests.",
             "Developed proficiency in a variety of programming languages and technical tools through intensive coursework and self-directed learning, preparing for a seamless transition to professional environments.",
             "Cultivated strong communication and leadership languages through active participation in student councils and as a student mentor, helping to organize major campus events and workshops."
         ],
@@ -402,7 +410,7 @@ export const education = [
         details: [
             "Improved technical communication and project management languages in a diverse cultural environment, working closely with students and faculty from various cultural backgrounds.",
             "Took specialized courses in Negotiation, Communication, Entrepreneurship, and Marketing from renowned professors, gaining insights into advanced business strategies and interpersonal dynamics.",
-            "Collaborated on interdisciplinary projects that emphasized scalable software solutions, applying theoretical knowledge to practical challenges.",
+            "Collaborated on interdisciplinary certifications that emphasized scalable software solutions, applying theoretical knowledge to practical challenges.",
             "Presented a reforestation project called 'Botanic Buddy' at an entrepreneurship competition, showcasing innovative approaches to environmental sustainability.",
             "Traveled across Kansas, Colorado, Los Angeles, and San Francisco, which broadened my cultural perspective and allowed me to make lasting international friendships.",
             "Perfected my English language languages through immersive experiences both in academic settings and during travel, enhancing my ability to communicate effectively in diverse environments."
@@ -428,6 +436,58 @@ export const education = [
     },
 ];
 
+export const testimonials = {
+    reviewer: "Anonymous Colleagues",
+    period: "Six-Month Review",
+    company: "MentorMate",
+    feedback: [
+      {
+        title: "Structured and Clear Communication",
+        detail: "Ivan expresses ideas and presents concepts in a structured way. He is incredibly articulate, making it easy for team members to understand complex information."
+      },
+      {
+        title: "Professionalism and Manners",
+        detail: "Ivan is very well-mannered, always polite, and maintains a positive demeanor, which enhances the work environment."
+      },
+      {
+        title: "Proactive Problem-Solving",
+        detail: "Ivan demonstrates a proactive approach to problem-solving, preferring to address challenges independently before seeking help, which shows his initiative and determination."
+      },
+      {
+        title: "Innovative Use of Technology",
+        detail: "Actively incorporates AI tools to enhance workflow efficiency, showing his adeptness at leveraging technology to streamline processes."
+      },
+      {
+        title: "Commitment to Team Growth",
+        detail: "Shows immense enthusiasm in training sessions related to coding, actively helping to elevate the team’s overall skill level."
+      },
+      {
+        title: "Technical Skills and Analysis",
+        detail: "Ivan is incredibly smart and talented. He has a knack for automation and possesses electrical/mechanical skills, which enable him to analyze and solve problems efficiently."
+      },
+      {
+        title: "Team Collaboration and Support",
+        detail: "During the Pelvital project, Ivan was attentive to details and always willing to help and support team members. His teamwork mindset has made him a crucial part of our project’s success."
+      },
+      {
+        title: "Efficiency and Communication",
+        detail: "He handles his tickets quickly and efficiently, maintaining direct, fluid, and cordial communication with ticket authors."
+      },
+      {
+        title: "Energy and Passion for Learning",
+        detail: "Ivan has an endless amount of energy and a strong desire to learn and improve. When he finds a task interesting, he goes above and beyond to deliver, especially when it involves back-end technologies or automation."
+      },
+      {
+        title: "Contributions to Team Knowledge",
+        detail: "Ivan is always open to helping his team with anything, including creating scripts to improve our workflow. His contributions are much appreciated."
+      },
+      {
+        title: "Innovative Problem Solving",
+        detail: "In the project, Ivan took the initiative to assist with the testing of controller data—a challenging task. His insights were invaluable and greatly assisted the team."
+      }
+    ]
+  };
+  
 
 export const footer = [
     {
@@ -454,11 +514,11 @@ export const footer = [
                 text: "send me a mail",
                 link: "mailto:weissvanderpol.ivan@gmail.com",
             },
-{
-    text: "Download Resume",
-    link: "https://ivanweissvanderpolgh.github.io/ivanweissvanderpol.github.io/assets/Ivan_Weiss_Resume.pdf",
-    target: "_blank"
-}
+            {
+                text: "Download Resume",
+                link: "https://ivanweissvanderpolgh.github.io/ivanweissvanderpol.github.io/assets/Ivan_Weiss_Resume.pdf",
+                target: "_blank"
+            }
         ],
     },
     {

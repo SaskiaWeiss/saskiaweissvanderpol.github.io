@@ -1,4 +1,4 @@
-const githubUsername = "IvanWeissVanDerPolGH";
+const githubUsername = "IvanWeissVanDerPol";
 
 const createGitConnectedURL = (username) => `https://gitconnected.com/v1/portfolio/${username}`;
 
