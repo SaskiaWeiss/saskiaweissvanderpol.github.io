@@ -1,461 +1,230 @@
 import {
     bio,
-    skills,
+    languages,
     projects,
     education,
     experience,
     footer,
-  } from "./data.js";
+} from "./data.js";
 
 import { URLs } from './user-data/urls.js';
-  
-  const { webProjects, softwareProjects, androidProjects, freelanceProjects } =
+
+const { professionalCertifications, technicalCertifications, educationalCertifications, LinkedInLearning, Test_Automation_University_TAU } =
     projects;
-  const { medium, gitConnected } = URLs;
-  
-  /**
-   * Fetches blogs from Medium profile.
-   *
-   * @function
-   * @async
-   *
-   * @throws {Error} If there is any error in fetching the blogs from Medium profile.
-   *
-   * @returns {void}
-   */
-  
-  async function fetchBlogsFromMedium(url) {
+
+const {gitConnected } = URLs;
+
+
+async function fetchGitConnectedData(url) {
     try {
-      const response = await fetch(url);
-      const { items } = await response.json();
-      populateBlogs(items, "blogs");
+        const response = await fetch(url);
+        const { basics } = await response.json();
+        // populateBlogs(items, "blogs");
+        mapBasicResponse(basics);
     } catch (error) {
-      throw new Error(
-        `Error in fetching the blogs from Medium profile: ${error}`
-      );
+        throw new Error(
+            `Error in fetching the blogs from git connected: ${error}`
+        );
     }
-  }
+}
 
-
-  async function fetchGitConnectedData(url) {
-    try {
-      const response = await fetch(url);
-      console.log(response);
-      const { basics } = await response.json();
-      // populateBlogs(items, "blogs");
-      mapBasicResponse(basics);
-    } catch (error) {
-      throw new Error(
-        `Error in fetching the blogs from git connected: ${error}`
-      );
-    }
-  }
-
-  function mapBasicResponse(basics) {
+function mapBasicResponse(basics) {
     const {
-      name,
-      label,
-      image,
-      email,
-      phone,
-      url,
-      summary,
-      profiles,
-      headline,
-      blog,
-      yearsOfExperience,
-      username,
-      locationAsString,
-      region,
-      karma,
-      id,
-      followers,
-      following,
-      picture,
-      website
-  } = basics;
-  
-  // added title of page
+        name,
+        label,
+        image,
+        email,
+        phone,
+        url,
+        summary,
+        profiles,
+        headline,
+        blog,
+        yearsOfExperience,
+        username,
+        locationAsString,
+        region,
+        karma,
+        id,
+        followers,
+        following,
+        picture,
+        website
+    } = basics;
+
+    // added title of page
     window.parent.document.title = name;
-  }
-  
-  /**
-   * Populates bio to the HTML page.
-   *
-   * @function
-   *
-   * @param {Array} items - An array of objects that contain bio information.
-   * @param {string} id - The id of the HTML element to which bio will be appended.
-   *
-   * @returns {void}
-   */
-  
-  function populateBio(items, id) {
-    const bioTag = document.getElementById(id);
-    items.forEach((bioItem) => {
-      const p = getElement("p", null);
-      p.innerHTML = bioItem;
-      bioTag.append(p);
+}
+/**
+ * Creates an HTML element with optional class, text, attributes, and children.
+ * @param {string} type - The type of the HTML element to create.
+ * @param {string|null} className - Optional. The class name of the element.
+ * @param {string|null} text - Optional. Text content of the element.
+ * @param {Object|null} attributes - Optional. Attributes to set on the element.
+ * @param {Array|null} children - Optional. Child elements to append to the created element.
+ * @returns {Element} The newly created element.
+ */
+function createAndSetupElement(type, className = null, text = null, attributes = {}, children = []) {
+    const element = document.createElement(type);
+    if (className) element.className = className;
+    if (text) element.textContent = text;
+    Object.entries(attributes).forEach(([key, value]) => {
+        element.setAttribute(key, value);
     });
-  }
-  
-  /**
-   * Populates skills to the HTML page.
-   *
-   * @function
-   *
-   * @param {Array} items - An array of objects that contain skill information.
-   * @param {string} id - The id of the HTML element to which skills will be appended.
-   *
-   * @returns {void}
-   */
-  
-  function populateSkills(items, id) {
+    children.forEach(child => {
+        element.appendChild(child);
+    });
+    return element;
+}
+
+/**
+ * Appends multiple child elements to a parent element.
+ * @param {languages} parent - The parent element.
+ * @param {...languages} children - Child elements to append to the parent.
+ */
+function appendChildren(parent, ...children) {
+    children.forEach(child => parent.appendChild(child));
+}
+
+function populateBio(items, id) {
+    const bioTag = document.getElementById(id);
+    items.forEach(bioItem => {
+        const p = createAndSetupElement('p', null, bioItem);
+        bioTag.appendChild(p);
+    });
+}
+
+function populateSkills(items, id) {
     const skillsTag = document.getElementById(id);
     items.forEach(({ skillName, color, percentage }) => {
-      const h3 = getElement("h3", null);
-      h3.innerHTML = skillName;
-  
-      const divProgress = getElement("div", "progress");
-      const divProgressBar = getElement("div", `progress-bar color-${color}`);
-      divProgressBar.style = `width: ${percentage}%`;
-      divProgress.append(divProgressBar);
-  
-      const divProgressWrap = getElement("div", "progress-wrap");
-      divProgressWrap.append(h3, divProgress);
-  
-      const divAnimateBox = getElement("div", "col-md-6 animate-box");
-      divAnimateBox.append(divProgressWrap);
-  
-      skillsTag.append(divAnimateBox);
-    });
-  }
-  
-  /**
-   * Populates projects to the HTML page.
-   *
-   * @function
-   *
-   * @param {Array} items - An array of objects that contain project information.
-   * @param {string} id - The id of the HTML element to which projects will be appended.
-   *
-   * @returns {void}
-   */
-  
-  function populateProjects(items, id) {
-    let projectdesign = document.getElementById(id);
-  
-    let h4 = document.createElement("h4");
-    h4.className = "project-heading";
-  
-    let a = document.createElement("a");
-    a.target = "_blank";
-  
-    let img = document.createElement("img");
-    img.className = "img-fluid";
-  
-    let divResumeContentLeft = document.createElement("div");
-    divResumeContentLeft.className = "resume-content";
-    divResumeContentLeft.id = "left-div";
-    divResumeContentLeft.append(img);
-  
-    let divResumeContentRight = document.createElement("div");
-    divResumeContentRight.className = "resume-content";
-    divResumeContentRight.id = "right-div";
-  
-    let p = document.createElement("p");
-    p.className = "project-description";
-  
-    let divSpan = document.createElement("div");
-  
-    let divSubHeading = document.createElement("div");
-    divSubHeading.className = "sub-heading";
-    divSubHeading.append(p);
-    divSubHeading.append(divSpan);
-    divResumeContentRight.append(divSubHeading);
-  
-    let divResumeItem = document.createElement("div");
-    divResumeItem.className = "resume-item";
-    divResumeItem.append(divResumeContentLeft);
-    divResumeItem.append(divResumeContentRight);
-    a.append(divResumeItem);
-  
-    let divProjectCard = document.createElement("div");
-    divProjectCard.className = "project-card";
-    divProjectCard.append(a);
-  
-    let li = document.createElement("li");
-    li.append(divProjectCard);
-  
-    let hr = document.createElement("hr");
-  
-    for (let i = 0; i < items.length; i++) {
-      h4.innerHTML = items[i].projectName;
-      a.href = items[i].preview;
-  
-      img.src = items[i].image;
-  
-      p.innerHTML = items[i].summary;
-  
-      divSpan.innerHTML = "";
-      for (let k = 0; k < items[i].techStack.length; k++) {
-        let span = document.createElement("span");
-        span.className = "badge badge-secondary";
-        span.innerHTML = items[i].techStack[k];
-        divSpan.append(span);
-      }
-  
-      projectdesign.append(li.cloneNode(true));
-  
-      if (i != items.length - 1) {
-        projectdesign.append(hr.cloneNode(true));
-      }
-    }
-  }
-  
-  /**
-   * Creates and populates a list of blog posts with specified properties
-   *
-   * @function
-   *
-   * @param {Array} items - An array of objects, each representing a blog post
-   * @param {string} id - The ID of the parent element where the list of posts will be appended
-   *
-   * @returns {undefined}
-   */
-  
-  function populateBlogs(items, id) {
-    const projectdesign = document.getElementById(id);
-    const count = 3;
-  
-    for (let i = 0; i < count; i++) {
-      const h4 = document.createElement("h4");
-      h4.className = "project-heading";
-      h4.innerHTML = items[i].title;
-  
-      const a = document.createElement("a");
-      a.href = items[i].link;
-      a.target = "_blank";
-      a.append(h4);
-  
-      const img = document.createElement("img");
-      img.src = items[i].thumbnail;
-      img.className = "img-fluid";
-      img.alt = items[i].title;
-  
-      const divResumeContentLeft = document.createElement("div");
-      divResumeContentLeft.className = "resume-content";
-      divResumeContentLeft.id = "left-div";
-      divResumeContentLeft.append(img);
-  
-      const divResumeContentRight = document.createElement("div");
-      divResumeContentRight.className = "resume-content";
-      divResumeContentRight.id = "right-div";
-  
-      const p = document.createElement("p");
-      p.className = "project-description";
-      const html = items[i].content;
-      const [, doc] = /<p>(.*?)<\/p>/g.exec(html) || [];
-      p.innerHTML = doc;
-  
-      const divSpan = document.createElement("div");
-      for (const category of items[i].categories) {
-        const span = document.createElement("span");
-        span.className = "badge badge-secondary";
-        span.innerHTML = category;
-        divSpan.append(span);
-      }
-  
-      const divSubHeading = document.createElement("div");
-      divSubHeading.className = "sub-heading";
-      divSubHeading.append(p, divSpan);
-      divResumeContentRight.append(divSubHeading);
-  
-      const divResumeItem = document.createElement("div");
-      divResumeItem.className = "resume-item";
-      divResumeItem.append(divResumeContentLeft, divResumeContentRight);
-      a.append(divResumeItem);
-  
-      const divProjectCard = document.createElement("div");
-      divProjectCard.className = "project-card";
-      divProjectCard.append(a);
-  
-      const li = document.createElement("li");
-      li.append(divProjectCard);
-      projectdesign.append(li);
-  
-      if (i !== count - 1) {
-        projectdesign.append(document.createElement("hr"));
-      }
-    }
-  }
-  
-  /**
-   * Populate the HTML timeline with items.
-   * @param {Array} items - An array of objects that represent the timeline items.
-   * @param {string} id - The id of the main container element in the HTML.
-   * @property {string} items[].subtitle - The subtitle of the timeline item.
-   * @property {string} items[].duration - The duration of the timeline item.
-   * @property {string} items[].title - The title of the timeline item.
-   * @property {Array} items[].details - An array of details for the timeline item.
-   * @property {Array} items[].tags - An array of tags for the timeline item.
-   * @property {string} items[].icon - The name of the font awesome icon to use.
-   */
-  function populateExp_Edu(items, id) {
-    let mainContainer = document.getElementById(id);
-  
-    for (let i = 0; i < items.length; i++) {
-      let spanTimelineSublabel = document.createElement("span");
-      spanTimelineSublabel.className = "timeline-sublabel";
-      spanTimelineSublabel.innerHTML = items[i].subtitle;
-  
-      let spanh2 = document.createElement("span");
-      spanh2.innerHTML = items[i].duration;
-  
-      let h2TimelineLabel = document.createElement("h2");
-      h2TimelineLabel.innerHTML = items[i].title;
-      h2TimelineLabel.append(spanh2);
-  
-      let divTimelineLabel = document.createElement("div");
-      divTimelineLabel.className = "timeline-label";
-      divTimelineLabel.append(h2TimelineLabel);
-      divTimelineLabel.append(spanTimelineSublabel);
-  
-      for (let j = 0; j < items[i].details.length; j++) {
-        let pTimelineText = document.createElement("p");
-        pTimelineText.className = "timeline-text";
-        pTimelineText.innerHTML = "&blacksquare; " + items[i].details[j];
-        divTimelineLabel.append(pTimelineText);
-      }
-  
-      let divTags = document.createElement("div");
-      for (let j = 0; j < items[i].tags.length; j++) {
-        let spanTags = document.createElement("span");
-        spanTags.className = "badge badge-secondary";
-        spanTags.innerHTML = items[i].tags[j];
-        divTags.append(spanTags);
-      }
-      divTimelineLabel.append(divTags);
-  
-      let iFa = document.createElement("i");
-      iFa.className = "fa fa-" + items[i].icon;
-  
-      let divTimelineIcon = document.createElement("div");
-      divTimelineIcon.className = "timeline-icon color-2";
-      divTimelineIcon.append(iFa);
-  
-      let divTimelineEntryInner = document.createElement("div");
-      divTimelineEntryInner.className = "timeline-entry-inner";
-      divTimelineEntryInner.append(divTimelineIcon);
-      divTimelineEntryInner.append(divTimelineLabel);
-  
-      let article = document.createElement("article");
-      article.className = "timeline-entry animate-box";
-      article.append(divTimelineEntryInner);
-  
-      mainContainer.append(article);
-    }
-  
-    let divTimelineIcon = document.createElement("div");
-    divTimelineIcon.className = "timeline-icon color-2";
-  
-    let divTimelineEntryInner = document.createElement("div");
-    divTimelineEntryInner.className = "timeline-entry-inner";
-    divTimelineEntryInner.append(divTimelineIcon);
-  
-    let article = document.createElement("article");
-    article.className = "timeline-entry begin animate-box";
-    article.append(divTimelineEntryInner);
-  
-    mainContainer.append(article);
-  }
-  
-  /**
-   * Populate links in the specified footer section with provided data.
-   *
-   * @param {Array} items - Array of objects containing data for links
-   * @param {String} id - Id of the footer section in which the links will be populated
-   *
-   * @return {undefined}
-   */
-  function populateLinks(items, id) {
-    let footer = document.getElementById(id);
-  
-    items.forEach(function (item) {
-      if (item.label !== "copyright-text") {
-        let span = document.createElement("span");
-        span.className = "col";
-  
-        let p = document.createElement("p");
-        p.className = "col-title";
-        p.innerHTML = item.label;
-        span.append(p);
-  
-        let nav = document.createElement("nav");
-        nav.className = "col-list";
-  
-        let ul = document.createElement("ul");
-        item.data.forEach(function (data) {
-          let li = document.createElement("li");
-          let a = document.createElement("a");
-          if (data.link) {
-            a.href = data.link;
-            a.target = "_blank";
-          }
-          if (data.func) {
-            a.setAttribute("onclick", data.func);
-          }
-          a.innerHTML = data.text;
-  
-          li.append(a);
-          ul.append(li);
+        const skillElement = createAndSetupElement('div', 'col-md-6 animate-box');
+        const progressWrap = createAndSetupElement('div', 'progress-wrap');
+        const h3 = createAndSetupElement('h3', null, skillName);
+        const progress = createAndSetupElement('div', 'progress');
+        const progressBar = createAndSetupElement('div', `progress-bar color-${color}`, null, {
+            style: `width: ${percentage}%`
         });
-        nav.append(ul);
-        span.append(nav);
-        footer.append(span);
-      }
-  
-      if (item.label === "copyright-text") {
-        let div = document.createElement("div");
-        div.className = "copyright-text no-print";
-        item.data.forEach(function (copyright) {
-          let p = document.createElement("p");
-          p.innerHTML = copyright;
-          div.append(p);
-        });
-        footer.append(div);
-      }
+
+        appendChildren(progress, progressBar);
+        appendChildren(progressWrap, h3, progress);
+        appendChildren(skillElement, progressWrap);
+        skillsTag.appendChild(skillElement);
     });
-  }
-  
-  /**
-   * Creates a new element with specified tag name and class name.
-   *
-   * @param {string} tagName - The tag name of the element.
-   * @param {string} className - The class name of the element.
-   *
-   * @return {HTMLElement} The newly created element.
-   */
-  function getElement(tagName, className) {
-    let item = document.createElement(tagName);
-    item.className = className;
-    return item;
-  }
-  
-  populateBio(bio, "bio");
-  
-  populateSkills(skills, "skills");
-  
-  fetchBlogsFromMedium(medium);
-  fetchGitConnectedData(gitConnected);
-  
-  populateProjects(webProjects, "web-projects");
-  populateProjects(softwareProjects, "software-projects");
-  populateProjects(androidProjects, "android-projects");
-  populateProjects(freelanceProjects, "freelance-projects");
-  
-  populateExp_Edu(experience, "experience");
-  populateExp_Edu(education, "education");
-  
-  populateLinks(footer, "footer");
-  
+}
+
+function populateProjects(items, id) {
+    const projectContainer = document.getElementById(id);
+    items.forEach(item => {
+        const projectCard = createAndSetupElement('div', 'project-card');
+        const link = createAndSetupElement('a', null, null, { href: item.preview, target: '_blank' });
+        const resumeItem = createAndSetupElement('div', 'resume-item');
+        const leftDiv = createAndSetupElement('div', 'resume-content', null, { id: 'left-div' });
+        const img = createAndSetupElement('img', 'img-fluid', null, { src: item.image });
+        const rightDiv = createAndSetupElement('div', 'resume-content', null, { id: 'right-div' });
+        const certificationHeading = createAndSetupElement('h4', 'certifications-heading', item.certificationName);
+
+        appendChildren(leftDiv, img);
+        appendChildren(rightDiv, certificationHeading);
+        appendChildren(resumeItem, leftDiv, rightDiv);
+        appendChildren(link, resumeItem);
+        appendChildren(projectCard, link);
+        projectContainer.appendChild(projectCard);
+    });
+}
+
+function populateExp_Edu(items, id) {
+    const mainContainer = document.getElementById(id);
+    items.forEach(item => {
+        const icon = createAndSetupElement('i', `fa fa-${item.icon}`);
+        const timelineIcon = createAndSetupElement('div', 'timeline-icon color-2', null, {}, [icon]);
+        const label = createAndSetupElement('div', 'timeline-label');
+        const title = createAndSetupElement('h2', null, item.title);
+        const subtitle = createAndSetupElement('span', 'timeline-sublabel', item.subtitle);
+        const duration = createAndSetupElement('span', null, item.duration);
+
+        title.appendChild(duration);
+        label.append(title, subtitle);
+        item.details.forEach(detail => {
+            const detailP = createAndSetupElement('p', 'timeline-text', `&blacksquare; ${detail}`);
+            label.appendChild(detailP);
+        });
+
+        const tagsDiv = createAndSetupElement('div');
+        item.tags.forEach(tag => {
+            const tagSpan = createAndSetupElement('span', 'badge badge-secondary', tag);
+            tagsDiv.appendChild(tagSpan);
+        });
+
+        label.appendChild(tagsDiv);
+        const inner = createAndSetupElement('div', 'timeline-entry-inner', null, {}, [timelineIcon, label]);
+        const article = createAndSetupElement('article', 'timeline-entry animate-box', null, {}, [inner]);
+        mainContainer.appendChild(article);
+    });
+
+    // Create the initial timeline entry
+    const startIcon = createAndSetupElement('div', 'timeline-icon color-2');
+    const startInner = createAndSetupElement('div', 'timeline-entry-inner', null, {}, [startIcon]);
+    const startArticle = createAndSetupElement('article', 'timeline-entry begin animate-box', null, {}, [startInner]);
+    mainContainer.appendChild(startArticle);
+}
+
+
+/**
+ * Populate links in the specified footer section with provided data.
+ *
+ * @param {Array} items - Array of objects containing data for links
+ * @param {String} id - Id of the footer section in which the links will be populated
+ */
+function populateLinks(items, id) {
+    const footer = document.getElementById(id);
+
+    items.forEach(item => {
+        if (item.label !== "copyright-text") {
+            const colSpan = createAndSetupElement('span', 'col');
+            const colTitle = createAndSetupElement('p', 'col-title', item.label);
+            const nav = createAndSetupElement('nav', 'col-list');
+            const ul = createAndSetupElement('ul');
+
+            item.data.forEach(data => {
+                const li = createAndSetupElement('li');
+                const a = createAndSetupElement('a', null, data.text, {
+                    href: data.link ? data.link : '#',
+                    target: data.link ? '_blank' : undefined,
+                    onclick: data.func ? data.func : undefined
+                });
+
+                li.appendChild(a);
+                ul.appendChild(li);
+            });
+
+            nav.appendChild(ul);
+            appendChildren(colSpan, colTitle, nav);
+            footer.appendChild(colSpan);
+        } else {
+            // Handle copyright text separately
+            const copyrightDiv = createAndSetupElement('div', 'copyright-text no-print');
+            item.data.forEach(copyItem => {
+                const p = createAndSetupElement('p', null, copyItem);
+                copyrightDiv.appendChild(p);
+            });
+            footer.appendChild(copyrightDiv);
+        }
+    });
+}
+
+
+populateBio(bio, "bio");
+
+populateSkills(languages, "languages");
+
+fetchGitConnectedData(gitConnected);
+
+populateProjects(Test_Automation_University_TAU, "TAU");
+populateProjects(LinkedInLearning, "LinkedInLearning");
+populateProjects(technicalCertifications, "technical-certifications");
+populateProjects(educationalCertifications, "professional-certifications");
+
+populateExp_Edu(experience, "experience");
+populateExp_Edu(education, "education");
+
+populateLinks(footer, "footer");

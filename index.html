@@ -3,93 +3,65 @@
 
 <head>
    <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible"
-         content="IE=edge">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title></title>
-   <meta name="viewport"
-         content="width=device-width, initial-scale=1">
-   <meta name="description"
-         content="Portfolio webpage of Vinay Somawat" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Portfolio webpage of IvanWeissVanDerPol" />
    <meta name="keywords"
-         content="portfolio,website,personal website,github,projects,computer science and engineering" />
-   <meta name="author"
-         content="Vinay Somawat" />
+      content="portfolio,website,personal website,github,projects,computer science and engineering" />
+   <meta name="author" content="IvanWeissVanDerPol" />
    <!--------------------Social Media icons------------------------>
-   <link rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-   <link rel="icon"
-         type="image/png"
-         href="/images/logo.png">
-   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700"
-         rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
-         rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap"
-         rel="stylesheet">
+   <link rel="icon" type="image/png" href="/images/logo.png">
+   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet">
    <!-- Animate.css -->
-   <link rel="stylesheet"
-         href="css/animate.css">
+   <link rel="stylesheet" href="css/animate.css">
    <!-- Bootstrap  -->
-   <link rel="stylesheet"
-         href="css/bootstrap.css">
+   <link rel="stylesheet" href="css/bootstrap.css">
    <!-- Theme style  -->
-   <link rel="stylesheet"
-         href="css/style.css">
+   <link rel="stylesheet" href="css/style.css">
    <!-- Modernizr JS -->
    <script src="js/modernizr-2.6.2.min.js"></script>
-   <script type="module"
-           src="index.js"></script>
+   <script type="module" src="index.js"></script>
    <script src="js/profile-card.js"></script>
+   <script src="node_modules\jquery\dist\jquery.min.js"></script>
+   <script src="node_modules\sticky-kit\dist\sticky-kit.min.js"></script>
+
 </head>
 
-<body>
+<body class="theme-ocean">
    <div id="colorlib-page">
       <div class="container-wrap">
-         <a href="#"
-            class="js-colorlib-nav-toggle colorlib-nav-toggle"
-            data-toggle="collapse"
-            data-target="#navbar"
-            aria-expanded="false"
-            aria-controls="navbar"><i></i></a>
+         <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar"><i></i></a>
          <!--------------------[START] Side Bar-------------------------->
-         <aside id="colorlib-aside"
-                role="complementary"
-                class="border js-fullheight no-print">
+         <aside id="colorlib-aside" role="complementary" class="border js-fullheight no-print">
             <div class="text-center">
                <div class="author-img">
                   <img alt="profile-img" src="images/logo.png">
                </div>
-               <h1 id="colorlib-logo"><a href="./index.html">Vinay
-                     Somawat</a>
+               <h1 id="colorlib-logo"><a href="./index.html">Ivan
+                     WeissVanDerPol</a>
                </h1>
-               <p><b>Engineering @Shiprocket</b></p>
+               <p><b><a href="mailto:WeissVanDerPol.Ivan@gmail.com">WeissVanDerPol.Ivan@gmail.com</a></b></p>
             </div>
-            <nav id="colorlib-main-menu"
-                 role="navigation"
-                 class="navbar"
-                 style="padding-top: 2em">
-               <div id="navbar"
-                    class="collapse">
+            <nav id="colorlib-main-menu" role="navigation" class="navbar" style="padding-top: 2em">
+               <div id="navbar" class="collapse">
                   <ul>
-                     <li><a href="#"
-                           data-nav-section="about">About</a></li>
-                     <li><a href="#"
-                           data-nav-section="skills">Skills</a>
+                     <li><a href="#" data-nav-section="about">About</a></li>
+                     <li><a href="#" data-nav-section="languages">languages</a>
                      </li>
-                     <li><a href="#"
-                           data-nav-section="projects">Projects</a>
+                     <li><a href="#" data-nav-section="certifications">certifications</a>
                      </li>
-                     <li><a href="#"
-                           data-nav-section="blogs">Blogs</a>
+                     <li><a href="#" data-nav-section="blogs">Blogs</a>
                      </li>
-                     <li><a href="#"
-                           data-nav-section="experience">Work
+                     <li><a href="#" data-nav-section="experience">Work
                            Experience</a></li>
-                     <li><a href="#"
-                           data-nav-section="education">Education</a></li>
-                     <li><a href="#"
-                           data-nav-section="contact">Contact</a>
+                     <li><a href="#" data-nav-section="education">Education</a></li>
+                     <li><a href="#" data-nav-section="contact">Contact</a>
                      </li>
                   </ul>
                </div>
@@ -99,11 +71,9 @@
          <!--------------------[START] Main Page------------------------->
          <div id="colorlib-main">
             <!--------------------[START] About me-------------------------->
-            <section class="colorlib-about"
-                     data-section="about">
+            <section class="colorlib-about" data-section="about">
                <div class="colorlib-narrow-content">
-                  <div class="row animate-box"
-                       data-animate-effect="fadeInLeft">
+                  <div class="row animate-box" data-animate-effect="fadeInLeft">
                      <div class="about-desc">
                         <h1>About</h1>
                         <div id="bio">
@@ -113,181 +83,129 @@
                </div>
             </section>
             <!--------------------[END] About me---------------------------->
-            <!--------------------[START] Skills---------------------------->
-            <section class="colorlib-skills"
-                     data-section="skills">
+            <!--------------------[START] prof summary------------------------>
+            <section class="colorlib-profile" data-section="profile-card">
                <div class="colorlib-narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box"
-                       data-animate-effect="fadeInLeft">
-                     <div class="about-desc">
-                        <h1>Skills</h1>
-                     </div>
-                  </div>
-                  <div id="skills"
-                       class="row">
-                  </div>
-               </div>
-            </section>
-            <!--------------------[END] Skills------------------------------>
-            <section class="colorlib-profile"
-                     data-section="profile-card">
-               <div class="colorlib-narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box"
-                       data-animate-effect="fadeInLeft">
+                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                      <div class="profile-cards">
+                        <!-- <div class="col">
+                           <div class="stack-card" user-id="8461233"></div>
+                        </div> -->
                         <div class="col">
-                           <div class="stack-card"
-                                user-id="8461233"></div>
-                        </div>
-                        <div class="col">
-                           <div class="github-card"
-                                username="vinaysomawat"></div>
+                           <div class="github-card" username="IvanWeissVanDerPol"></div>
                         </div>
                      </div>
                   </div>
                </div>
             </section>
-            <!--------------------[START] Projects-------------------------->
-            <section class="colorlib-projects no-print"
-                     data-section="projects">
+            <!--------------------[END] prof summary-------------------------->
+            <!--------------------[START] languages---------------------------->
+            <section class="colorlib-languages" data-section="languages">
                <div class="colorlib-narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box"
-                       data-animate-effect="fadeInLeft">
+                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                      <div class="about-desc">
-                        <h1>Projects</h1>
+                        <h1>languages</h1>
                      </div>
                   </div>
-                  <ul id="accordion"
-                      class="accordion animate-box"
-                      data-animate-effect="fadeInLeft">
+                  <div id="languages" class="row">
+                  </div>
+               </div>
+            </section>
+            <!--------------------[END] languages------------------------------>
+            <!--------------------[START] Certifications-------------------------->
+            <section class="colorlib-certifications no-print" data-section="certifications">
+               <div class="colorlib-narrow-content">
+                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                     <div class="about-desc">
+                        <h1>Certifications</h1>
+                     </div>
+                  </div>
+                  <ul id="accordion" class="accordion animate-box" data-animate-effect="fadeInLeft">
                      <li>
                         <div class="link">
-                           <p style="margin-bottom: 0px">Web Projects</p>
+                           <p style="margin-bottom: 0px">Technical Certifications
+                           </p>
                            <i class="fa fa-chevron-down"></i>
                         </div>
-                        <ul id="web-projects"
-                            class="submenu">
+                        <ul id="technical-certifications" class="submenu">
                         </ul>
                      </li>
                      <li>
                         <div class="link">
-                           <p style="margin-bottom: 0px">Software Projects
+                           <p style="margin-bottom: 0px">Professional Certifications
                            </p>
                            <i class="fa fa-chevron-down"></i>
                         </div>
-                        <ul id="software-projects"
-                            class="submenu">
+                        <ul id="professional-certifications" class="submenu">
                         </ul>
                      </li>
                      <li>
                         <div class="link">
-                           <p style="margin-bottom: 0px">Android Projects
-                           </p>
+                           <p style="margin-bottom: 0px">Test Automation University (TAU)</p>
                            <i class="fa fa-chevron-down"></i>
                         </div>
-                        <ul id="android-projects"
-                            class="submenu">
+                        <ul id="TAU" class="submenu">
                         </ul>
                      </li>
                      <li>
                         <div class="link">
-                           <p style="margin-bottom: 0px">Freelance Projects
-                           </p>
+                           <p style="margin-bottom: 0px">LinkedInLearning</p>
                            <i class="fa fa-chevron-down"></i>
                         </div>
-                        <ul id="freelance-projects"
-                            class="submenu">
+                        <ul id="LinkedInLearning" class="submenu">
                         </ul>
                      </li>
                   </ul>
                </div>
             </section>
-            <!--------------------[END] Projects---------------------------->
-            <!--------------------[START] Blogs----------------------------->
-            <section class="colorlib-blogs no-print"
-                     data-section="blogs">
-               <div class="colorlib-narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box"
-                       data-animate-effect="fadeInLeft">
-                     <div class="about-desc">
-                        <h1>Latest <span style="color: #f9bf3f">Blogs</span>
-                        </h1>
-                     </div>
-                  </div>
-                  <ul id="accordion"
-                      class="accordion animate-box"
-                      data-animate-effect="fadeInLeft">
-                     <li class="open">
-                        <ul id="blogs"
-                            class="submenu"
-                            style="display: block;">
-                        </ul>
-                     </li>
-                     <a class="readmore"
-                        href="https://vinaysomawat.medium.com/"
-                        target="_blank">
-                        <p>Read more &RightArrow;</p>
-                     </a>
-                  </ul>
-               </div>
-            </section>
-            <!--------------------[END] Blogs------------------------------->
+
+            <!--------------------[END] Certifications---------------------------->
             <!--------------------[START] Work Experience------------------->
-            <section class="colorlib-experience"
-                     data-section="experience">
+            <section class="colorlib-experience" data-section="experience">
                <div class="colorlib-narrow-content">
                   <div class="row row-bottom-padded-sm animate-box fadeInLeft animated"
-                       data-animate-effect="fadeInLeft">
+                     data-animate-effect="fadeInLeft">
                      <div class="about-desc">
-                        <h1>Work <span style="color: #f9bf3f">Experience</span>
+                        <h1>Work <span class="highlightedText">Experience</span>
                         </h1>
                      </div>
                   </div>
-                  <div class="timeline-centered"
-                       id="experience">
+                  <div class="timeline-centered" id="experience">
                   </div>
                </div>
             </section>
             <!--------------------[END] Work Experience--------------------->
             <!--------------------[START] Education------------------------->
-            <section class="colorlib-education"
-                     data-section="education">
+            <section class="colorlib-education" data-section="education">
                <div class="colorlib-narrow-content">
                   <div class="row row-bottom-padded-sm animate-box fadeInLeft animated"
-                       data-animate-effect="fadeInLeft">
+                     data-animate-effect="fadeInLeft">
                      <div class="about-desc">
                         <h1>Education</h1>
                      </div>
                   </div>
-                  <div class="timeline-centered"
-                       id="education">
+                  <div class="timeline-centered" id="education">
                   </div>
                </div>
             </section>
             <!--------------------[END] Education--------------------------->
             <!--------------------[START] Contact--------------------------->
-            <section class="colorlib-contact"
-                     data-section="contact">
+            <section class="colorlib-contact" data-section="contact">
                <div class="colorlib-narrow-content">
-                  <div class="row row-bottom-padded-sm animate-box"
-                       data-animate-effect="fadeInLeft">
+                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                      <div class="about-desc">
                         <h1>Contact</h1>
                      </div>
-                     <p>Please feel welcome to contact me via email at vinaysomawat40@gmail.com. Whether you would like
-                        to discuss a technology, a business opportunity, or simply say hello, I would be delighted to
-                        hear from you.
+                     <p>I'm just an email or a message away on any platform. Send me an email at Weissvanderpol.ivan@gmail.com, or find me on LinkedIn, Twitter, Facebook, or Instagram. Let’s start a conversation about your ideas or just enjoy a casual chat
                      </p>
                   </div>
                </div>
             </section>
             <!--------------------[END] Contact----------------------------->
             <!--------------------[START] Footer---------------------------->
-            <section class="colorlib-footer no-print"
-                     data-section="footer">
+            <section class="colorlib-footer no-print" data-section="footer">
                <div class="colorlib-narrow-content">
-                  <footer class="footer"
-                          id="footer">
+                  <footer class="footer" id="footer">
                   </footer>
                </div>
             </section>

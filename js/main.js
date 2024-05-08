@@ -263,7 +263,7 @@
 
     mobileMenuOutsideClick();
     sliderMain();
-    stickyFunction();
+    // stickyFunction();
     detectDayNightMode();
   });
 })();
