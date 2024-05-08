@@ -454,6 +454,11 @@ export const footer = [
                 text: "send me a mail",
                 link: "mailto:weissvanderpol.ivan@gmail.com",
             },
+{
+    text: "Download Resume",
+    link: "https://ivanweissvanderpolgh.github.io/ivanweissvanderpol.github.io/assets/Ivan_Weiss_Resume.pdf",
+    target: "_blank"
+}
         ],
     },
     {
