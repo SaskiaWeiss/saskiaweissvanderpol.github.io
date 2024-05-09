@@ -503,14 +503,6 @@ export const footer = [
         label: "Resources",
         data: [
             {
-                text: "Enable Dark/Light Mode",
-                func: "enableDarkMode()",
-            },
-            {
-                text: "Print this page",
-                func: "window.print()",
-            },
-            {
                 text: "send me a mail",
                 link: "mailto:weissvanderpol.ivan@gmail.com",
             },

@@ -947,10 +947,16 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .about-desc h1 {
+	margin-left: 20px;
 	margin-bottom: 20px;
 	font-size: 38px;
 	font-weight: 600;
 	font-family: "Montserrat", Georgia, serif;
+}
+.about-desc p {
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: 300;
 }
 
 .hire {
@@ -1094,7 +1100,7 @@ body.offcanvas .colorlib-nav-toggle {
 
 .timeline-centered {
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 5px;
 }
 
 .timeline-centered:before,
@@ -1125,13 +1131,13 @@ body.offcanvas .colorlib-nav-toggle {
 	background: var(--background-light);
 	top: 20px;
 	bottom: 20px;
-	margin-left: 29px;
+	margin-left: 9px;
 }
 
 .timeline-centered .timeline-entry {
 	position: relative;
 	margin-top: 5px;
-	margin-left: 30px;
+	margin-left: 10px;
 	margin-bottom: 10px;
 	clear: both;
 }
@@ -2736,7 +2742,7 @@ footer ul {
 
 .colorlib-narrow-content {
     margin: 0 auto;
-    width: 80%; /* Adjust width as necessary */
+    width: 90%; /* Adjust width as necessary */
     padding: 20px;
     background-color: #f9f9f9; /* Light background for the content */
     border-radius: 8px;

@@ -267,27 +267,35 @@
     detectDayNightMode();
   });
 })();
+class Accordion {
+  constructor(el, multiple = false) {
+    this.el = el || $(document);
+    this.multiple = multiple;
 
-var Accordion = function (el, multiple) {
-  this.el = el || {};
-  this.multiple = multiple || false;
-  // Variables privadas
-  var links = this.el.find(".link");
-  // Evento
-  links.on("click", { el: this.el, multiple: this.multiple }, this.dropdown);
-};
-
-Accordion.prototype.dropdown = function (e) {
-  var $el = e.data.el;
-  ($this = $(this)), ($next = $this.next());
-
-  $next.slideToggle();
-  $this.parent().toggleClass("open");
-
-  if (!e.data.multiple) {
-    $el.find(".submenu").not($next).slideUp().parent().removeClass("open");
+    // Initialize the event listener
+    this.initEvents();
   }
-};
+
+  initEvents() {
+    // Using arrow function to maintain the context of 'this'
+    this.el.find('.link').on('click', (event) => {
+      this.dropdown(event);
+    });
+  }
+
+  dropdown(event) {
+    const $this = $(event.currentTarget);
+    const $next = $this.next();
+
+    $next.slideToggle();
+    $this.parent().toggleClass('open');
+
+    // Only allow one submenu to be open unless `multiple` is true
+    if (!this.multiple) {
+      $this.parent().siblings().children('.submenu').slideUp().parent().removeClass('open');
+    }
+  }
+}
 
 var accordion = new Accordion($("#accordion"), false);
 

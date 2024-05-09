@@ -4836,8 +4836,9 @@ a.label:focus {
 .badge {
 	display: inline-block;
 	min-width: 10px;
+	max-width: 800px;
 	padding: 3px 7px;
-	font-size: 12px;
+	font-size: 10px;
 	color: #fff;
 	line-height: 1;
 	vertical-align: middle;
