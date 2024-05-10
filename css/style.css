@@ -93,29 +93,9 @@
 	--color-smooth: var(--background-dark);
 }
 
-/* Dark Mode Theme */
-.theme-dark-mode {
-	--primary-color: #e07a5f;
-	--secondary-color: #3d405b;
-	--tertiary-color: #81b29a;
-	--dark-color: #3d405b;
-	--light-color: #f4f1de;
-	--background-dark: #81b29a;
-	--background-light: #f2cc8f;
-	--error-color: #e63946;
-	--success-color: #2a9d8f;
-	--warning-color: #e9c46a;
-	--info-color: #2a9d8f;
-
-	
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
 
 /* Light Mode Theme */
-.theme-light-mode {
+.theme-cream {
 	--primary-color: #84a98c;
 	--secondary-color: #52796f;
 	--tertiary-color: #354f52;
@@ -135,47 +115,7 @@
 	--color-smooth: var(--background-dark);
 }
 
-/* Neon Theme */
-.theme-neon {
-	--primary-color: #03edf9;
-	--secondary-color: #03f4eb;
-	--tertiary-color: #f72585;
-	--dark-color: #03f4eb;
-	--light-color: #03f7d1;
-	--background-dark: #03071e;
-	--background-light: #f72585;
-	--error-color: #b5179e;
-	--success-color: #7209b7;
-	--warning-color: #560bad;
-	--info-color: #480ca8;
 
-	
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
-
-/* Retro Theme */
-.theme-retro {
-	--primary-color: #ffbe0b;
-	--secondary-color: #fb5607;
-	--tertiary-color: #8338ec;
-	--dark-color: #fb5607;
-	--light-color: #ff006e;
-	--background-dark: #8338ec;
-	--background-light: #3a86ff;
-	--error-color: #f72585;
-	--success-color: #4cc9f0;
-	--warning-color: #ffd166;
-	--info-color: #118ab2;
-
-	
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
 
 /* Minimalist Theme */
 .theme-minimalist {
@@ -236,8 +176,26 @@
 }
 
 .dark-mode {
-	background-color: black;
-	color: white;
+	--primary-color: #e07a5f;
+	--secondary-color: #3d405b;
+	--tertiary-color: #81b29a;
+	--dark-color: #3d405b;
+	--light-color: #f4f1de;
+	--background-dark: #81b29a;
+	--background-light: #f2cc8f;
+	--error-color: #e63946;
+	--success-color: #2a9d8f;
+	--warning-color: #e9c46a;
+	--info-color: #2a9d8f;
+
+	
+	--text-color: var(--primary-color);
+	--Title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+
+	background-color: var(--background-dark);
+	color: var(--text-color);
 }
 
 /* =======================================================
@@ -1448,6 +1406,8 @@ body.offcanvas .colorlib-nav-toggle {
 	font-size: 16px;
 	font-family: var(--font-primary);
 	margin-bottom: 10px;
+	color: var(--primary-color)
+
 }
 
 .progress {

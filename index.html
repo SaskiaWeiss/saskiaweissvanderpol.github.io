@@ -4,35 +4,36 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title></title>
+   <title>Ivan Weiss Van Der Pol's Portfolio</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="description" content="Portfolio webpage of IvanWeissVanDerPol" />
-   <meta name="keywords"
-      content="portfolio,website,personal website,github,certifications,computer science and engineering" />
-   <meta name="author" content="IvanWeissVanDerPol" />
-   <!--------------------Social Media icons------------------------>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+   <meta name="description" content="Explore the portfolio of Ivan Weiss Van Der Pol, showcasing skills in software engineering, project management, and more.">
+   <meta name="keywords" content="Ivan Weiss Van Der Pol, software engineer, portfolio, project management, certifications, web development">
+   <meta name="author" content="Ivan Weiss Van Der Pol">
+   
+
    <link rel="icon" type="image/png" href="/images/logo_face.png">
-   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet">
-   <!-- Animate.css -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Playfair+Display:wght@400;400i;700&family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet">
+   
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="css/animate.css">
-   <!-- Bootstrap  -->
    <link rel="stylesheet" href="css/bootstrap.css">
-   <!-- Theme style  -->
    <link rel="stylesheet" href="css/style.css">
+
+
    <!-- Modernizr JS -->
-   <script src="js/modernizr-2.6.2.min.js"></script>
-   <script type="module" src="index.js"></script>
-   <script src="js/profile-card.js"></script>
+   <script src="js/modernizr-2.6.2.min.js" defer></script>
+   <script type="module" src="index.js" defer></script>
+   <script src="js/profile-card.js" defer></script>
    <script src="node_modules\jquery\dist\jquery.min.js"></script>
    <script src="node_modules\sticky-kit\dist\sticky-kit.min.js"></script>
+   <script src="js/theme-switcher.js "></script>
 
 </head>
 
-<body class="theme-ocean">
+<body id="theme-style" class="theme-ocean">
    <div id="colorlib-page">
       <div class="container-wrap">
          <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
@@ -58,8 +59,15 @@
                      <li><a href="#" data-nav-section="experience">Work Experience</a></li>
                      <li><a href="#" data-nav-section="education">Education</a></li>
                      <li><a href="#" data-nav-section="testimonials">Testimonials</a></li>
-                     <li><a href="#" data-nav-section="contact">Contact</a>
-                     </li>
+                     <li><a href="#" data-nav-section="contact">Contact</a></li>
+                     <li><select id="theme-selector">
+                        <option value="theme-ocean">Ocean</option>
+                        <option value="theme-earth-tone">Earth Tone</option>
+                        <option value="theme-pastel">Pastel</option>
+                        <option value="theme-cream">Cream</option>
+                        <option value="theme-minimalist">Minimalist</option>
+                        <option value="theme-vintage">Vintage</option>
+                    </select></li>
                   </ul>
                </div>
             </nav>
@@ -323,6 +331,7 @@
             });
          });
       });
+      
 
    </script>
 
