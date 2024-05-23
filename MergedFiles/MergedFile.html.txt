@@ -1,0 +1,680 @@
+﻿Location: C:\Users\WEISSIVA\OneDrive\Documentos\Personal\porfolio website\ivanweissvanderpol_2.github.io\index.html
+File Name: index.html
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Ivan Weiss Van Der Pol's Portfolio</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Explore the portfolio of Ivan Weiss Van Der Pol, showcasing skills in software engineering, project management, and more.">
+   <meta name="keywords" content="Ivan Weiss Van Der Pol, software engineer, portfolio, project management, certifications, web development">
+   <meta name="author" content="Ivan Weiss Van Der Pol">
+   
+
+   <link rel="icon" type="image/png" href="/images/logo_face.png">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Playfair+Display:wght@400;400i;700&family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet">
+   
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/bootstrap.css">
+   <link rel="stylesheet" href="css/style.css">
+
+
+   <!-- Modernizr JS -->
+   <script src="js/modernizr-2.6.2.min.js" defer></script>
+   <script type="module" src="index.js" defer></script>
+   <script src="js/profile-card.js" defer></script>
+   <script src="node_modules\jquery\dist\jquery.min.js"></script>
+   <script src="node_modules\sticky-kit\dist\sticky-kit.min.js"></script>
+   <script src="js/theme-switcher.js "></script>
+
+</head>
+
+<body id="theme-style" class="theme-ocean">
+   <div id="colorlib-page">
+      <div class="container-wrap">
+         <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar"><i></i></a>
+         <!--------------------[START] Side Bar-------------------------->
+         <aside id="colorlib-aside" role="complementary" class="border js-fullheight no-print">
+            <div class="text-center">
+               <div class="author-img">
+                  <img alt="profile-img" src="images/logo_face.png">
+               </div>
+               <h1 id="colorlib-logo"><a href="./index.html">Ivan
+                     WeissVanDerPol</a>
+               </h1>
+               <p><b><a href="mailto:weissvanderpol.ivan@gmail.com">weissvanderpol.ivan@gmail.com</a></b></p>
+            </div>
+            <nav id="colorlib-main-menu" role="navigation" class="navbar" style="padding-top: 2em">
+               <div id="navbar" class="collapse">
+                  <ul>
+                     <li><a href="#" data-nav-section="about">About</a></li>
+                     <li><a href="#" data-nav-section="languages">languages</a></li>
+                     <li><a href="#" data-nav-section="Skills">Skills</a></li>
+                     <li><a href="#" data-nav-section="certifications">certifications</a> </li>
+                     <li><a href="#" data-nav-section="experience">Work Experience</a></li>
+                     <li><a href="#" data-nav-section="education">Education</a></li>
+                     <li><a href="#" data-nav-section="testimonials">Testimonials</a></li>
+                     <li><a href="#" data-nav-section="contact">Contact</a></li>
+                     <li><select id="theme-selector">
+                        <option value="theme-ocean">Ocean</option>
+                        <option value="theme-earth-tone">Earth Tone</option>
+                        <option value="theme-pastel">Pastel</option>
+                        <option value="theme-cream">Cream</option>
+                        <option value="theme-minimalist">Minimalist</option>
+                        <option value="theme-vintage">Vintage</option>
+                    </select></li>
+                  </ul>
+               </div>
+            </nav>
+         </aside>
+         <!--------------------[END] Side Bar---------------------------->
+         <!--------------------[START] Main Page------------------------->
+         <div id="colorlib-main">
+            <!--------------------[START] About me-------------------------->
+            <section class="colorlib-about" data-section="about">
+               <div class="colorlib-narrow-content">
+                  <div class="row animate-box" data-animate-effect="fadeInLeft">
+                     <div class="about-desc">
+                        <h1>About</h1>
+                        <div id="bio">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!--------------------[END] About me---------------------------->
+            <!--------------------[START] prof summary------------------------>
+            <section class="colorlib-profile" data-section="profile-card">
+               <div class="colorlib-narrow-content">
+                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                     <div class="profile-cards">
+                        <!-- <div class="col">
+                           <div class="stack-card" user-id="8461233"></div>
+                        </div> -->
+                        <!-- <div class="col"> -->
+                        <div class="github-card" username="IvanWeissVanDerPol"></div>
+                        <!-- </div> -->
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!--------------------[END] prof summary-------------------------->
+            <!--------------------[START] languages---------------------------->
+            <section class="colorlib-languages" data-section="languages">
+               <div class="colorlib-narrow-content">
+                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                     <div class="about-desc">
+                        <h1>languages</h1>
+                     </div>
+                  </div>
+                  <div id="languages" class="row">
+                  </div>
+               </div>
+            </section>
+            <!--------------------[END] languages------------------------------>
+            <!--------------------[START] Skills-------------------------->
+            <section class="colorlib-certifications no-print" data-section="Skills">
+               <div class="colorlib-narrow-content">
+                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                     <div class="about-desc">
+                        <h1>Skills</h1>
+                     </div>
+                  </div>
+                  <ul id="accordion" class="accordion animate-box" data-animate-effect="fadeInLeft">
+                     <li>
+                        <div class="link">
+                           <p style="margin-bottom: 0px">Programming and Scripting Languages</p>
+                        </div>
+                        <ul id="Programming and Scripting Languages" class="submenu">
+                           <!-- Changed ID to match JS data object -->
+                        </ul>
+                     </li>
+                     <li>
+                        <div class="link">
+                           <p style="margin-bottom: 0px">Database Management Systems</p>
+                        </div>
+                        <ul id="Database Management Systems" class="submenu">
+                           <!-- Changed ID to match JS data object -->
+                        </ul>
+                     </li>
+                     <li>
+                        <div class="link">
+                           <p style="margin-bottom: 0px">Testing and Automation Tools</p>
+                        </div>
+                        <ul id="Testing and Automation Tools" class="submenu">
+                           <!-- Changed ID to match JS data object -->
+                        </ul>
+                     </li>
+                     <li>
+                        <div class="link">
+                           <p style="margin-bottom: 0px">Version Control and CI/CD Tools</p>
+                        </div>
+                        <ul id="Version Control and CI/CD Tools" class="submenu">
+                           <!-- Changed ID to match JS data object -->
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </section>
+
+
+            <!--------------------[END] Skills---------------------------->
+
+            <!--------------------[START] Certifications-------------------------->
+            <section class="colorlib-certifications no-print" data-section="certifications">
+               <div class="colorlib-narrow-content">
+                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                     <div class="about-desc">
+                        <h1>Certifications</h1>
+                     </div>
+                  </div>
+                  <ul id="accordion" class="accordion animate-box" data-animate-effect="fadeInLeft">
+                     <li>
+                        <div class="link">
+                           <p style="margin-bottom: 0px; cursor: pointer;">Technical Certifications</p>
+                        </div>
+                        <ul id="technical-certifications" class="submenu" style="display: none;">
+                           <!-- Certification items will be populated here -->
+                        </ul>
+                     </li>
+                     <li>
+                        <div class="link">
+                           <p style="margin-bottom: 0px; cursor: pointer;">Professional Certifications</p>
+                        </div>
+                        <ul id="professional-certifications" class="submenu" style="display: none;">
+                           <!-- Certification items will be populated here -->
+                        </ul>
+                     </li>
+                     <li>
+                        <div class="link">
+                           <p style="margin-bottom: 0px; cursor: pointer;">Test Automation University (TAU)</p>
+                        </div>
+                        <ul id="TAU" class="submenu" style="display: none;">
+                           <!-- Certification items will be populated here -->
+                        </ul>
+                     </li>
+                     <li>
+                        <div class="link">
+                           <p style="margin-bottom: 0px; cursor: pointer;">LinkedInLearning</p>
+                        </div>
+                        <ul id="LinkedInLearning" class="submenu" style="display: none;">
+                           <!-- Certification items will be populated here -->
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </section>
+
+
+            <!--------------------[END] Certifications---------------------------->
+            <!--------------------[START] Work Experience------------------->
+            <section class="colorlib-experience" data-section="experience">
+               <div class="colorlib-narrow-content">
+                  <div class="row row-bottom-padded-sm animate-box fadeInLeft animated"
+                     data-animate-effect="fadeInLeft">
+                     <div class="about-desc">
+                        <h1>Work <span class="highlightedText">Experience</span>
+                        </h1>
+                     </div>
+                  </div>
+                  <div class="timeline-centered" id="experience">
+                  </div>
+               </div>
+            </section>
+            <!--------------------[END] Work Experience--------------------->
+            <!--------------------[START] Education------------------------->
+            <section class="colorlib-education" data-section="education">
+               <div class="colorlib-narrow-content">
+                  <div class="row row-bottom-padded-sm animate-box fadeInLeft animated"
+                     data-animate-effect="fadeInLeft">
+                     <div class="about-desc">
+                        <h1>Education</h1>
+                     </div>
+                  </div>
+                  <div class="timeline-centered" id="education">
+                  </div>
+               </div>
+            </section>
+            <!--------------------[END] Education--------------------------->
+            <!--------------------[START] Education------------------------->
+            <section class="colorlib-education" data-section="testimonials">
+               <div class="colorlib-narrow-content">
+                  <div class="row row-bottom-padded-sm animate-box fadeInLeft animated"
+                     data-animate-effect="fadeInLeft">
+                     <div class="about-desc">
+                        <h1>Testimonials</h1>
+                     </div>
+                  </div>
+                  <div id="testimonialCarousel" \class="carousel slide" data-ride="carousel">
+                     <div class="carousel-inner" id="testimonialItems">
+                       <!-- Carousel items will be inserted here by JavaScript -->
+                     </div>
+                     <!-- <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                       <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                       <span class="carousel-contro\\l-next-icon" aria-hidden="true"></span>
+                       <span class="sr-only">Next</span> -->
+                     </a>
+                   </div>
+                   
+               </div>
+            </section>
+            <!--------------------[END] Education--------------------------->
+            <!--------------------[START] Contact--------------------------->
+            <section class="colorlib-contact" data-section="contact">
+               <div class="colorlib-narrow-content">
+                  <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                     <div class="about-desc">
+                        <h1>Contact</h1>
+                     </div>
+                     <p>I'm just an email or a message away on any platform. Send me an email at
+                        Weissvanderpol.ivan@gmail.com, or find me on LinkedIn, Twitter, Facebook, or Instagram. Letâ€™s
+                        start a conversation about your ideas or just enjoy a casual chat
+                     </p>
+                  </div>
+               </div>
+            </section>
+            <!--------------------[END] Contact----------------------------->
+            <!--------------------[START] Footer---------------------------->
+            <section class="colorlib-footer no-print" data-section="footer">
+               <div class="colorlib-narrow-content">
+                  <footer class="footer" id="footer">
+                  </footer>
+               </div>
+            </section>
+            <!--------------------[END] Footer------------------------------>
+         </div>
+         <!-----[END] Main Page--------->
+      </div>
+   </div>
+   <!-- jQuery -->
+   <script src="js/jquery.min.js"></script>
+   <!-- jQuery Easing -->
+   <script src="js/jquery.easing.1.3.js"></script>
+   <!-- Bootstrap -->
+   <script src="js/bootstrap.min.js"></script>
+   <!-- Waypoints -->
+   <script src="js/jquery.waypoints.min.js"></script>
+   <!-- Flexslider -->
+   <script src="js/jquery.flexslider-min.js"></script>
+   <!-- Counters -->
+   <script src="js/jquery.countTo.js"></script>
+   <!-- MAIN JS -->
+   <script src="js/main.js"></script>
+   <script>
+      document.addEventListener("DOMContentLoaded", function () {
+         // Select all clickable "link" elements within the accordion
+         var acc = document.querySelectorAll(".colorlib-certifications .link");
+
+         // Add click event to each link
+         acc.forEach(function (link) {
+            link.addEventListener("click", function () {
+               // Toggle the "active" class to change the header style
+               this.classList.toggle("active");
+
+               // Select the next sibling element which should be the submenu
+               var submenu = this.nextElementSibling;
+
+               // Toggle display CSS property based on its current state
+               if (submenu.style.display === "flex" || submenu.style.display === '') {
+                  submenu.style.display = "none";
+               } else {
+                  submenu.style.display = "flex";
+               }
+            });
+         });
+      });
+      
+
+   </script>
+
+</body>
+
+</html>
+
+---
+
+
+Location: C:\Users\WEISSIVA\OneDrive\Documentos\Personal\porfolio website\ivanweissvanderpol_2.github.io\node_modules\sticky-kit\test\index.html
+File Name: index.html
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>sticky kit test</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="../jquery.sticky-kit.js"></script>
+</head>
+<body>
+
+<div class="buttons">
+  <button class="attach">Attach</button>
+  <button class="detach">Detach</button>
+  <button class="recalc">Recalc</button>
+</div>
+
+<h1>Basic Stick</h1>
+<div class="container one">
+  <div class="item"></div>
+  <div class="item full" id="grow_1"></div>
+  <div class="item"></div>
+</div>
+
+<button class="grow_element" data-target="#grow_1">Grow</button>
+<button class="scramble_element" data-target="#grow_1">Scramble no event</button>
+
+<h1>Variable</h1>
+<div class="container one">
+  <div class="item"></div>
+  <div class="item half"></div>
+  <div class="item full"></div>
+</div>
+
+<h1>Inner Scroll</h1>
+<div class="container one">
+  <div class="item threequarter"></div>
+  <div class="item full"></div>
+  <div class="item onefive"></div>
+  <div class="item triple"></div>
+</div>
+
+<h1>Borders/Margins/Padding</h1>
+<div class="container one borders">
+  <div class="item"></div>
+  <div class="item half"></div>
+  <div class="item full"></div>
+</div>
+
+<h1>Right Align</h1>
+<div class="container one borders" style="text-align: right">
+  <div class="item"></div>
+  <div class="item half"></div>
+  <div class="item full"></div>
+</div>
+
+<h1>Events</h1>
+<div class="container one" id="events_container">
+  <div class="item"></div>
+  <div class="item half"></div>
+  <div class="item full"></div>
+</div>
+
+<h1>Floating Columns</h1>
+<div class="container one clearfix borders">
+  <div class="item float"></div>
+  <div class="item float half"></div>
+  <div class="item float full"></div>
+</div>
+
+<h1>Floating Columns Right</h1>
+<div class="container one clearfix borders">
+  <div class="item float right"></div>
+  <div class="item float half"></div>
+  <div class="item float full"></div>
+</div>
+
+<h1>Floating Columns Right2</h1>
+<div class="container one clearfix borders">
+  <div class="item float right"></div>
+  <div class="item float half right"></div>
+  <div class="item float full"></div>
+</div>
+
+<h1>Floating w/ Margin</h1>
+<div class="container one clearfix borders">
+  <div class="item float" style="margin: 10px"></div>
+  <div class="item float half" style="margin: 10px"></div>
+  <div class="item float full" style="margin: 10px"></div>
+</div>
+
+<h1>Float & Div</h1>
+<div class="container one clearfix borders">
+  <div class="item float full"></div>
+  <div class="item" style="display: block; margin-left: 210px;"></div>
+</div>
+
+<h1>No Stick</h1>
+<div class="container one">
+  <div class="item full"></div>
+  <div class="item full"></div>
+</div>
+
+
+<h1>Custom Spacer Block</h1>
+<div class="container one">
+  <div class="manual_spacer">
+    <div class="item block use_manual"></div>
+  </div>
+  <div class="full static" style="margin: 10px auto; width: 400px;"></div>
+</div>
+
+<h1>Custom Spacer Float</h1>
+<div class="container one">
+  <div class="manual_spacer">
+    <div class="item float use_manual">
+      <iframe src="http://leafo.net/hi.png" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <div class="item float right">
+    <iframe src="http://leafo.net/hi.png" frameborder="0"></iframe>
+  </div>
+
+  <div class="full static" style="margin: 10px auto; width: 400px;"></div>
+</div>
+
+<div class="full"></div>
+
+<script type="text/javascript">
+  (function() {
+    var win = $(window);
+    var sizes = {
+      half: 0.5,
+      full: 1,
+      threequarter: 3/4,
+      onefive: 1.5,
+      "double": 2,
+      triple: 3
+    }
+    for (k in sizes) {
+      var v = sizes[k]
+      $("." + k).css({
+       height: Math.floor(win.height() * v) + "px"
+      });
+    }
+
+    function attach() {
+      $(".container .item:not(.use_manual)").stick_in_parent();
+
+      $(".container .item.use_manual").stick_in_parent({
+        parent: ".container",
+        spacer: ".manual_spacer"
+      });
+    }
+
+    attach();
+
+    $("#events_container").on("sticky_kit:stick", function(e) {
+      $(e.target).html("got stick event");
+    });
+
+    $("#events_container").on("sticky_kit:unstick", function(e) {
+      $(e.target).html("got unstick event");
+    });
+
+    $("#events_container").on("sticky_kit:bottom", function(e) {
+      $(e.target).html("got bottom event");
+    });
+
+    $("#events_container").on("sticky_kit:unbottom", function(e) {
+      $(e.target).html("got unbottom event");
+    });
+
+    $(document.body)
+      .on("click", ".recalc", function() {
+        console.log("Triggering recalc");
+        $(document.body).trigger("sticky_kit:recalc")
+      })
+      .on("click", ".detach", function() {
+        console.log("Triggering detach");
+        $(".container .item").trigger("sticky_kit:detach");
+      })
+      .on("click", ".attach", function() {
+        console.log("Triggering attach");
+        attach();
+      })
+      .on("click", ".grow_element", function(e) {
+        var elm = $($(e.currentTarget).data("target"));
+        elm.animate({height: elm.height() * 2}, function() {
+          console.log("triggering recalc...");
+          $(document.body).trigger("sticky_kit:recalc")
+        });
+      })
+      .on("click", ".scramble_element", function(e) {
+        var elm = $($(e.currentTarget).data("target"));
+        var new_height = Math.floor(win.height() * (1 + Math.random()));
+        console.log("setting new height", new_height);
+        elm.css({height: new_height + "px"});
+      });
+
+  })();
+</script>
+
+</body>
+</html>
+
+
+---
+
+
+Location: C:\Users\WEISSIVA\OneDrive\Documentos\Personal\porfolio website\ivanweissvanderpol_2.github.io\node_modules\sticky-kit\test\two.html
+File Name: two.html
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+  .container {
+    border: 2px gray dashed;
+    padding: 10px;
+  }
+
+  .outer {
+    border: 2px solid red;
+    padding: 10px;
+    overflow: hidden;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .left {
+    float: left;
+    height: 5000px;
+    border: 1px solid green;
+  }
+
+  .right {
+    float: right;
+    border: 1px solid blue;
+    position: relative;
+  }
+
+  .right div {
+    margin: 20px 0;
+  }
+
+  .header {
+    border: 1px solid red;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    height: 200px;
+  }
+
+  .fixed {
+    height: 95px;
+    position: fixed;
+    background: rgba(255, 0, 0, 0.5);
+    top:0;
+    left:0;
+    right:0;
+  }
+  
+  </style>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="../jquery.sticky-kit.js"></script>
+</head>
+<body>
+<div class="fixed">
+  hello
+  <button class="detach">Detach</button>
+  <button class="attach">Attach</button>
+</div>
+
+<div class="container" id="container">
+  <div class="header">
+    The Header
+  </div>
+
+  <div class="outer">
+    <div class="left">Hello world</div>
+    <div class="right">
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+      <div>Piss World</div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  function attach() {
+    $(".right").stick_in_parent({container: $("#container"), offset_top: 100});
+  }
+
+  $(document.body).on("click", ".detach", function(e) {
+    $(".right").trigger("sticky_kit:detach");
+  });
+
+  $(document.body).on("click", ".attach", attach);
+  attach();
+</script>
+
+</body>
+</html>
+
+
+---
+
+

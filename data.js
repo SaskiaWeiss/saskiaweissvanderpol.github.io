@@ -1,4 +1,6 @@
 
+export const githubUsername = "IvanWeissVanDerPol";
+
 
 export const bio = [
     "Discover Ivan Weiss: Engineer, Innovator, Educator.",
@@ -508,7 +510,7 @@ export const footer = [
             },
             {
                 text: "Download Resume",
-                link: "https://ivanweissvanderpolgh.github.io/ivanweissvanderpol.github.io/assets/Ivan_Weiss_Resume.pdf",
+                link: "assets\\Ivan_Weiss_Resume.pdf",
                 target: "_blank"
             }
         ],
