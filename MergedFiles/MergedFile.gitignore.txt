@@ -1,7 +1,0 @@
-﻿Location: C:\Users\WEISSIVA\OneDrive\Documentos\Personal\porfolio website\ivanweissvanderpol_2.github.io\.gitignore
-File Name: .gitignore
-.vscode
-
----
-
-

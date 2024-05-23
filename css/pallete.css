@@ -1,0 +1,119 @@
+/* Default Theme */
+.theme-default {
+	--primary-color: #2c98f0;
+	--secondary-color: #333333;
+	--tertiary-color: #f9bf3f;
+	--dark-color: #333333;
+	--light-color: #ffffff;
+	--background-dark: #000000;
+	--background-light: #f9bf3f;
+	--error-color: #d9534f;
+	--success-color: #5cb85c;
+	--warning-color: #f0ad4e;
+	--info-color: #5bc0de;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+/* Ocean Breeze Theme */
+.theme-ocean-breeze {
+	--primary-color: #0077b6;
+	--secondary-color: #023e8a;
+	--tertiary-color: #90e0ef;
+	--dark-color: #03045e;
+	--light-color: #caf0f8;
+	--background-dark: #023047;
+	--background-light: #ade8f4;
+	--error-color: #ef233c;
+	--success-color: #2a9d8f;
+	--warning-color: #ffb703;
+	--info-color: #8ecae6;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+/* Sunset Glow Theme */
+.theme-sunset-glow {
+	--primary-color: #ff6f61;
+	--secondary-color: #ff9a76;
+	--tertiary-color: #ffd1ba;
+	--dark-color: #d1495b;
+	--light-color: #ffe8d6;
+	--background-dark: #6d597a;
+	--background-light: #f4acb7;
+	--error-color: #d62828;
+	--success-color: #38b000;
+	--warning-color: #ffca3a;
+	--info-color: #2ec4b6;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+/* Forest Harmony Theme */
+.theme-forest-harmony {
+	--primary-color: #2a9d8f;
+	--secondary-color: #264653;
+	--tertiary-color: #e9c46a;
+	--dark-color: #1d3557;
+	--light-color: #f1faee;
+	--background-dark: #457b9d;
+	--background-light: #a8dadc;
+	--error-color: #e63946;
+	--success-color: #2a9d8f;
+	--warning-color: #f4a261;
+	--info-color: #457b9d;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+/* Desert Mirage Theme */
+.theme-desert-mirage {
+	--primary-color: #e76f51;
+	--secondary-color: #264653;
+	--tertiary-color: #f4a261;
+	--dark-color: #2a9d8f;
+	--light-color: #e9c46a;
+	--background-dark: #1d3557;
+	--background-light: #f1faee;
+	--error-color: #e63946;
+	--success-color: #2a9d8f;
+	--warning-color: #f4a261;
+	--info-color: #457b9d;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}
+
+/* Midnight Sky Theme */
+.theme-midnight-sky {
+	--primary-color: #14213d;
+	--secondary-color: #fca311;
+	--tertiary-color: #e5e5e5;
+	--dark-color: #000000;
+	--light-color: #ffffff;
+	--background-dark: #2a2a2a;
+	--background-light: #e5e5e5;
+	--error-color: #e63946;
+	--success-color: #38b000;
+	--warning-color: #fca311;
+	--info-color: #3a86ff;
+
+	--text-color: var(--primary-color);
+	--title-color: var(--secondary-color);
+	--color: var(--background-dark);
+	--color-smooth: var(--background-dark);
+}

@@ -1,6 +1,19 @@
 
 export const githubUsername = "IvanWeissVanDerPol";
 
+export const Name = "Ivan";
+export const LastName = "Weiss Van Der Pol";
+export const FullName = `${Name} ${LastName}`;
+export const mail = "weissvanderpol.ivan@gmail.com";
+
+// Meta information
+export const metaTitle = "Ivan Weiss Van Der Pol's Portfolio";
+export const metaDescription = "Explore the portfolio of Ivan Weiss Van Der Pol, showcasing skills in software engineering, project management, and more.";
+export const metaKeywords = "Ivan Weiss Van Der Pol, software engineer, portfolio, project management, certifications, web development";
+export const metaAuthor = "Ivan Weiss Van Der Pol";
+
+// Contact information
+export const contactInfo = `I'm just an email or a message away on any platform. Send me an email at ${mail}, or find me on LinkedIn, Twitter, Facebook, or Instagram. Let’s start a conversation about your ideas or just enjoy a casual chat.`;
 
 export const bio = [
     "Discover Ivan Weiss: Engineer, Innovator, Educator.",
@@ -9,7 +22,6 @@ export const bio = [
     `Beyond developing software, I'm committed to educating and empowering the next generation of tech professionals, sharing insights and inspiring innovation.`,
     "Thank you for exploring my journey and contributions to the tech world!",
 ];
-
 
 export const languages = [
 
@@ -367,8 +379,6 @@ export const experience = [
         icon: "globe",
     }
 ];
-
-
 
 export const education = [
     {

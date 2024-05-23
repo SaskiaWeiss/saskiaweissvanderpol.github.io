@@ -10,156 +10,6 @@
 	--btn-color: #1e2641;
 }
 
-/* Default Theme */
-.theme-default {
-	--primary-color: #2c98f0;
-	--secondary-color: #333333;
-	--tertiary-color: #f9bf3f;
-	--dark-color: #333333;
-	--light-color: #ffffff;
-	--background-dark: #000000;
-	--background-light: #f9bf3f;
-	--error-color: #d9534f;
-	--success-color: #5cb85c;
-	--warning-color: #f0ad4e;
-	--info-color: #5bc0de;
-
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
-
-/* Ocean Theme */
-.theme-ocean {
-	--primary-color: #0077b6;
-	--secondary-color: #023e8a;
-	--tertiary-color: #03045e;
-	--dark-color: #023e8a;
-	--light-color: #caf0f8;
-	--background-dark: #03045e;
-	--background-light: #90e0ef;
-	--error-color: #e63946;
-	--success-color: #2a9d8f;
-	--warning-color: #f4a261;
-	--info-color: #00b4d8;
-
-	
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
-
-/* Earth Tone Theme */
-.theme-earth-tone {
-	--primary-color: #6a040f;
-	--secondary-color: #370617;
-	--tertiary-color: #03071e;
-	--dark-color: #370617;
-	--light-color: #ffba08;
-	--background-dark: #03071e;
-	--background-light: #f48c06;
-	--error-color: #dc2f02;
-	--success-color: #9d0208;
-	--warning-color: #d00000;
-	--info-color: #e85d04;
-
-	
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
-
-/* Pastel Theme */
-.theme-pastel {
-	--primary-color: #ffb3c1;
-	--secondary-color: #ffafcc;
-	--tertiary-color: #f4acb7;
-	--dark-color: #ffafcc;
-	--light-color: #f4acb7;
-	--background-dark: #9d8189;
-	--background-light: #f9e2e2;
-	--error-color: #f28482;
-	--success-color: #84a59d;
-	--warning-color: #f6bd60;
-	--info-color: #f7ede2;
-
-	
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
-
-
-/* Light Mode Theme */
-.theme-cream {
-	--primary-color: #84a98c;
-	--secondary-color: #52796f;
-	--tertiary-color: #354f52;
-	--dark-color: #52796f;
-	--light-color: #cad2c5;
-	--background-dark: #354f52;
-	--background-light: #f4f1de;
-	--error-color: #e76f51;
-	--success-color: #2a9d8f;
-	--warning-color: #e9c46a;
-	--info-color: #264653;
-
-	
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
-
-
-
-/* Minimalist Theme */
-.theme-minimalist {
-	--primary-color: #333333;
-	--secondary-color: #4d4d4d;
-	--tertiary-color: #b3b3b3;
-	--dark-color: #262626;
-	--light-color: #e5e5e5;
-	--background-dark: #666666;
-	--background-light: #999999;
-	--error-color: #808080;
-	--success-color: #a8dadc;
-	--warning-color: #e63946;
-	--info-color: #f1faee;
-
-	
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
-
-/* Vintage Theme */
-.theme-vintage {
-	--primary-color: #6d6875;
-	--secondary-color: #b5838d;
-	--tertiary-color: #e5989b;
-	--dark-color: #b5838d;
-	--light-color: #ffe8d6;
-	--background-dark: #6d6875;
-	--background-light: #f7ede2;
-	--error-color: #e63946;
-	--success-color: #2a9d8f;
-	--warning-color: #f4a261;
-	--info-color: #a8dadc;
-
-	
-	--text-color: var(--primary-color);
-	--Title-color: var(--secondary-color);
-	--color: var(--background-dark);
-	--color-smooth: var(--background-dark);
-}
-
-
 /* General styling for the select dropdown */
 #theme-selector {
     display: flex;                   /* Ensure the dropdown fills the container width */
@@ -2791,4 +2641,209 @@ footer ul {
 	width: 100px;
     height: auto;
 
+}
+/* Standard property 'appearance' for compatibility */
+input,
+button,
+select,
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
+.carousel {
+  position: relative;
+  margin-top: 20px;
+  /* height: 300px;} */
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 200px; /* Minimum height; adjust as needed */
+  height: auto; /* Allow height to grow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-inner .carousel-item {
+  display: none;
+  position: relative;
+  width: 100%;
+  min-height: 230px;
+  height: auto; /* Allow height to grow */
+  padding: 20px;
+  text-align: center;
+  background-color: var(--background-light);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.6s ease-in-out;
+}
+
+.carousel-inner .carousel-item.active {
+  display: block;
+  position: relative;
+}
+
+.carousel-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-inner .testimonial-title {
+  font-size: 2em; /* Increased font size for better hierarchy */
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  font-weight: bold; /* Make the title bold */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-inner .testimonial-detail {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: var(--background-dark);
+  font-family: var(--font-secondary);
+  padding: 0 20px; /* Increase padding for better readability */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.carousel-indicators .active {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption .btn {
+  text-shadow: none;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    font-size: 30px;
+  }
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .icon-prev {
+    margin-left: -15px;
+  }
+  .carousel-control .glyphicon-chevron-right,
+  .carousel-control .icon-next {
+    margin-right: -15px;
+  }
+
+  .carousel-caption {
+    left: 20%;
+    right: 20%;
+    padding-bottom: 30px;
+  }
+
+  .carousel-indicators {
+    bottom: 20px;
+  }
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.carousel-controls .btn {
+  font-size: 2em; /* Increased font size for better visibility */
+  background-color: transparent;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.carousel-controls .btn:hover {
+  color: var(--background-dark);
+}
+
+.carousel-inner .testimonial-title .highlight {
+  font-weight: bold;
+  color: var(--primary-color); /* Emphasize key points */
+}
+
+/* Optional CSS for buttons */
+#prevTestimonial,
+#nextTestimonial {
+  padding: 0 10px;
+  margin: 0 5px;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  color: var(--background-dark);
+  cursor: pointer;
+}
+
+#prevTestimonial:hover,
+#nextTestimonial:hover {
+  color: var(--primary-color);
 }
