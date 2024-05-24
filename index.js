@@ -1,10 +1,15 @@
-import { Name, LastName, FullName, mail, metaTitle, metaDescription, metaKeywords, metaAuthor, contactInfo, githubUsername, bio, languages, certifications, education, experience, footer, skills, testimonials } from './data.js';
+import {
+    Name, LastName, FullName, mail, metaTitle, metaDescription, metaKeywords, metaAuthor, contactInfo, githubUsername, bio, languages, certifications, education, experience, footer, skills, testimonials
+} from './data.js';
 import { URLs } from './user-data/urls.js';
+
+const enableLogging = true; // Set this to false to disable logs
 
 /**
  * Set the meta tags and title dynamically
  */
 function setMetaTags() {
+    if (enableLogging) console.log('Setting meta tags');
     document.title = metaTitle;
     document.querySelector('meta[name="description"]').setAttribute('content', metaDescription);
     document.querySelector('meta[name="keywords"]').setAttribute('content', metaKeywords);
@@ -15,6 +20,7 @@ function setMetaTags() {
  * Improved element creation function that can also attach events.
  */
 function createElement(type, { className, text, style, attributes, events, children } = {}) {
+    if (enableLogging) console.log(`Creating element: ${type}, className: ${className}`);
     const element = document.createElement(type);
     if (className) element.className = className;
     if (text) element.textContent = text;
@@ -36,10 +42,9 @@ function populateContainer(containerId, items, createElementCallback) {
     }
     container.innerHTML = ''; // Clear container
     items.forEach((item, index) => {
-        // console.log('Appending item to container:', containerId, 'item:', item, 'index:', index);
+        if (enableLogging) console.log(`Appending item to container: ${containerId}, item:`, item, 'index:', index);
         container.appendChild(createElementCallback(item, index));
     });
-
 }
 
 /**
@@ -53,6 +58,7 @@ function createBioItem(item) {
  * Creates a language skill element with a progress bar.
  */
 function createLanguageSkillElement(language) {
+    if (enableLogging) console.log('Creating language skill element:', language);
     const { skillName, color, percentage } = language;
     const skillContainer = createElement('div', {
         className: 'col-md-6 animate-box',
@@ -78,6 +84,7 @@ function createLanguageSkillElement(language) {
 }
 
 function createSkillItem(skill) {
+    if (enableLogging) console.log('Creating skill item:', skill);
     const { skillName, imagePath, description } = skill;
 
     const listItem = document.createElement('li');
@@ -106,6 +113,7 @@ function createSkillItem(skill) {
 }
 
 function createCertificationItem(certification) {
+    if (enableLogging) console.log('Creating certification item:', certification);
     const { certificationName = '', image = '', preview = '#', description = '' } = certification || {};
 
     const certificationCard = document.createElement('li');
@@ -140,6 +148,7 @@ function createCertificationItem(certification) {
 }
 
 function createExperienceItem(experience) {
+    if (enableLogging) console.log('Creating experience item:', experience);
     const { title, subtitle, duration, details, tags, icon } = experience;
 
     const experienceEntry = document.createElement('article');
@@ -190,6 +199,7 @@ function createExperienceItem(experience) {
 }
 
 function createEducationItem(education) {
+    if (enableLogging) console.log('Creating education item:', education);
     const { title, subtitle, duration, details, tags, icon } = education;
 
     const educationEntry = document.createElement('article');
@@ -239,7 +249,6 @@ function createEducationItem(education) {
     return educationEntry;
 }
 
-
 /**
  * Creates an HTML element for a testimonial.
  * @param {Object} testimonial - An object containing the title and detail of a testimonial.
@@ -247,7 +256,7 @@ function createEducationItem(education) {
  * @returns {HTMLElement} - A DOM element representing the testimonial.
  */
 function createTestimonialElement(testimonial, isActive) {
-    // console.log(isActive);
+    if (enableLogging) console.log('Creating testimonial element:', testimonial, 'isActive:', isActive);
     const wrapper = document.createElement('div');
     wrapper.className = `carousel-item ${isActive ? 'active' : ''}`;
 
@@ -270,6 +279,7 @@ function createTestimonialElement(testimonial, isActive) {
 }
 
 function createFooterItem(item) {
+    if (enableLogging) console.log('Creating footer item:', item);
     const { label, data } = item;
 
     if (label === "copyright-text") {
@@ -319,6 +329,7 @@ function createFooterItem(item) {
  * Create and return a GitHub card element.
  */
 function createGitHubCard(username) {
+    if (enableLogging) console.log('Creating GitHub card for username:', username);
     const githubCardDiv = document.getElementById('github-card');
     githubCardDiv.setAttribute('username', username);
     return githubCardDiv;
@@ -328,6 +339,7 @@ function createGitHubCard(username) {
  * Create and return a category element.
  */
 function createCategoryElement(categoryName, items, createItemCallback) {
+    if (enableLogging) console.log('Creating category element:', categoryName);
     const listItem = createElement('li');
     const linkDiv = createElement('div', { className: 'link', children: [['p', { text: categoryName, style: 'margin-bottom: 0px; cursor: pointer;' }]] });
     const sublist = createElement('ul', { className: 'submenu', style: 'display: none;' });
@@ -353,6 +365,7 @@ function createCategoryElement(categoryName, items, createItemCallback) {
  * A unified fetch function to handle all data retrieval needs.
  */
 async function fetchData(url, handleData) {
+    if (enableLogging) console.log('Fetching data from URL:', url);
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -365,87 +378,117 @@ async function fetchData(url, handleData) {
 
 function mapBasicResponse(response) {
     const { basics } = response;
-    const { name, label, image, email, phone } = basics;
-    // console.log(basics);
+    const { name, label, image, email, phone, url, summary, profiles, headline, blog, yearsOfExperience, username, locationAsString, region, karma, id, followers, following, picture, website } = basics;
+    if (enableLogging) console.log('Mapping basic response:', basics);
     window.parent.document.title = name;
-    // Use other properties as needed
-    // For example, you can add the label to the title
-    if (label) {
-        window.parent.document.title += ` - ${label}`;
-    }
 }
+function initializeCarousel(carouselSelector, prevButtonSelector, nextButtonSelector, interval = 3000, enableLogging = false) {
+    const carouselElement = $(carouselSelector);
+    carouselElement.carousel({
+        interval: interval
+    });
+
+    document.getElementById(prevButtonSelector).addEventListener('click', () => {
+        if (enableLogging) console.log('Previous testimonial button clicked');
+        carouselElement.carousel('prev');
+        carouselElement.carousel('pause');
+    });
+
+    document.getElementById(nextButtonSelector).addEventListener('click', () => {
+        if (enableLogging) console.log('Next testimonial button clicked');
+        carouselElement.carousel('next');
+        carouselElement.carousel('pause');
+    });
+
+    document.addEventListener('click', (event) => {
+        const isClickInside = event.target.closest(`#${prevButtonSelector}`) || event.target.closest(`#${nextButtonSelector}`);
+        if (!isClickInside) {
+            if (enableLogging) console.log('Click outside navigation buttons, resuming carousel');
+            carouselElement.carousel('cycle');
+        }
+    });
+}
+
+function populateTestimonials(containerId, testimonials, enableLogging = false) {
+    if (enableLogging) console.log('Populating testimonials');
+    populateContainer(containerId, testimonials, (item, index) => {
+        if (enableLogging) console.log('Creating testimonial item:', item, 'at index:', index);
+        return createTestimonialElement(item, index === 0);
+    });
+}
+
+function populateSkillsAccordion(containerId, skills, enableLogging = false) {
+    const skillsAccordion = document.getElementById(containerId);
+    Object.keys(skills).forEach(category => {
+        if (skills[category]) {
+            const categoryElement = createCategoryElement(category.replace(/_/g, ' '), skills[category], createSkillItem);
+            skillsAccordion.appendChild(categoryElement);
+        } else {
+            if (enableLogging) console.warn(`Undefined skill category: ${category}`);
+        }
+    });
+}
+
+function populateCertificationsAccordion(containerId, certifications, enableLogging = false) {
+    const certificationsAccordion = document.getElementById(containerId);
+    Object.keys(certifications).forEach(category => {
+        if (certifications[category]) {
+            const categoryElement = createCategoryElement(category.replace(/_/g, ' '), certifications[category], createCertificationItem);
+            certificationsAccordion.appendChild(categoryElement);
+        } else {
+            if (enableLogging) console.warn(`Undefined certification category: ${category}`);
+        }
+    });
+}
+
+function populatePersonalInfo(fullNameId, emailId, contactInfoId, fullName, email, contactInfo, enableLogging = false) {
+    if (enableLogging) console.log('Populating personal info');
+    document.getElementById(fullNameId).textContent = fullName;
+    const emailElement = document.getElementById(emailId);
+    emailElement.textContent = email;
+    emailElement.setAttribute('href', `mailto:${email}`);
+    document.getElementById(contactInfoId).textContent = contactInfo;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     try {
-        // Initialization code
+        if (enableLogging) console.log('Document loaded, initializing...');
+
+        // Set meta tags
         setMetaTags();
 
-        document.getElementById('fullname').textContent = FullName;
-        document.getElementById('email').textContent = mail;
-        document.getElementById('email').setAttribute('href', `mailto:${mail}`);
-        document.getElementById('contact-info').textContent = contactInfo;
+        // Populate personal info
+        populatePersonalInfo('fullname', 'email', 'contact-info', FullName, mail, contactInfo, enableLogging);
 
+        // Create GitHub card
         createGitHubCard(githubUsername);
-
+        // fetchData(URLs.gitConnected, mapBasicResponse);
+        // Populate bio
         populateContainer('bio', bio, createBioItem);
-        fetchData(URLs.gitConnected, mapBasicResponse);
+
+        // Populate languages
         populateContainer('languages', languages, createLanguageSkillElement);
 
-        const skillsAccordion = document.getElementById('skills-accordion');
-        Object.keys(skills).forEach(category => {
-            if (skills[category]) {
-                const categoryElement = createCategoryElement(category.replace(/_/g, ' '), skills[category], createSkillItem);
-                skillsAccordion.appendChild(categoryElement);
-            } else {
-                console.warn(`Undefined skill category: ${category}`);
-            }
-        });
+        // Populate skills accordion
+        populateSkillsAccordion('skills-accordion', skills, enableLogging);
 
-        const certificationsAccordion = document.getElementById('accordion');
-        Object.keys(certifications).forEach(category => {
-            if (certifications[category]) {
-                const categoryElement = createCategoryElement(category.replace(/_/g, ' '), certifications[category], createCertificationItem);
-                certificationsAccordion.appendChild(categoryElement);
-            } else {
-                console.warn(`Undefined certification category: ${category}`);
-            }
-        });
+        // Populate certifications accordion
+        populateCertificationsAccordion('accordion', certifications, enableLogging);
 
+        // Populate experience
         populateContainer('experience', experience, createExperienceItem);
+
+        // Populate education
         populateContainer('education', education, createEducationItem);
 
-        // Populate testimonials with active class on the first item
-        // console.log('Populating testimonials');
-        populateContainer('testimonialItems', testimonials.feedback, (item, index) => {
-            // console.log('Creating testimonial item:', item, 'at index:', index);
-            return createTestimonialElement(item, index === 0);
-        });
+        // Populate testimonials
+        populateTestimonials('testimonialItems', testimonials.feedback, enableLogging);
 
+        // Populate footer
         populateContainer('footer', footer, createFooterItem);
 
-        // Initialize the carousel with interval
-        const carouselElement = $('#testimonialCarousel');
-        carouselElement.carousel({
-            interval: 3000 // Set the interval to 3 seconds
-        });
-
-        // Pause the carousel when buttons are clicked
-        document.getElementById('prevTestimonial').addEventListener('click', () => {
-            carouselElement.carousel('prev');
-            carouselElement.carousel('pause');
-        });
-
-        document.getElementById('nextTestimonial').addEventListener('click', () => {
-            carouselElement.carousel('next');
-            carouselElement.carousel('pause');
-        });
-
-        // Resume the carousel when clicking outside the buttons
-        document.addEventListener('click', (event) => {
-            const isClickInside = event.target.closest('#prevTestimonial') || event.target.closest('#nextTestimonial');
-            if (!isClickInside) {
-                carouselElement.carousel('cycle');
-            }
-        });
+        // Initialize carousel
+        initializeCarousel('#testimonialCarousel', 'prevTestimonial', 'nextTestimonial', 3000, enableLogging);
 
     } catch (error) {
         console.error(`Error during initialization: ${error.message}`);
