@@ -123,57 +123,57 @@ export const certifications = {
         {
             certificationName: "Java Programming",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_JavaProgramming_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_JavaProgramming_Certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/TAU_JavaProgramming_Certificate.jpg"
         },
         {
             certificationName: "Python Programming",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_PythonProgramming_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_PythonProgramming_Certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/TAU_PythonProgramming_Certificate.jpg"
         },
         {
             certificationName: "Foundations for QA Automation",
             image: "images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_Funadations_for_QA_Automation.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_Funadations_for_QA_Automation.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_Funadations_for_QA_Automation.jpg"
         },
         {
             certificationName: "IntelliJ for QA Automation",
             image: "images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_InteliJ_For_QA_Automation.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_InteliJ_For_QA_Automation.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/certificates_TAU_InteliJ_For_QA_Automation.jpg"
         },
         {
             certificationName: "API Testing Python",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_APITestingPython_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_APITestingPython_Certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/TAU_APITestingPython_Certificate.jpg"
         },
         {
             certificationName: "Introduction to TestNG",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_IntroductionToTestNG_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_IntroductionToTestNG_Certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/TAU_IntroductionToTestNG_Certificate.jpg"
         },
         {
             certificationName: "WebElement Locator Strategies",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_WebElementLocatorStrategies_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_WebElementLocatorStrategies_Certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/TAU_WebElementLocatorStrategies_Certificate.jpg"
         },
         {
             certificationName: "Selenium WebDriver Java",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverJava_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverJava_Certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverJava_Certificate.jpg"
         },
         {
             certificationName: "Selenium WebDriver Python",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverPython_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverPython_Certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/TAU_SeleniumWebDriverPython_Certificate.jpg"
         },
         {
             certificationName: "Continuous Integration Jenkins",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_ContinuousIntegrationJenkins_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_ContinuousIntegrationJenkins_Certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/TAU_ContinuousIntegrationJenkins_Certificate.jpg"
         },
         {
             certificationName: "Source Control with Git",
             image: "images/Certifications/Mentormate/Test_Automation_University/TAU_SourceControlGit_Certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Test_Automation_University/TAU_SourceControlGit_Certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Test_Automation_University/TAU_SourceControlGit_Certificate.jpg"
         }
     ],
 
@@ -182,92 +182,92 @@ export const certifications = {
         {
             certificationName: "Learning Python",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Python.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Python.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Python.jpg"
         },
         {
             certificationName: "Python Essential Training",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Python_Essential_Training.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Python_Essential_Training.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Python_Essential_Training.jpg"
         },
         {
             certificationName: "Learning C",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_C.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_C.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_C.jpg"
         },
         {
             certificationName: "Learning Java 11",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Java_11.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Java_11.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_Java_11.jpg"
         },
         {
             certificationName: "Learning SQL Programming",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_SQL_Programming.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_SQL_Programming.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Learning_SQL_Programming.jpg"
         },
         {
             certificationName: "HTML Essential Training",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_HTML_Essential_Training.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_HTML_Essential_Training.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_HTML_Essential_Training.jpg"
         },
         {
             certificationName: "CSS Essential Training 2019",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_CSS_Essential_Training_2019.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_CSS_Essential_Training_2019.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_CSS_Essential_Training_2019.jpg"
         },
         {
             certificationName: "JavaScript Essential Training",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_JavaScript_Essential_Training.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_JavaScript_Essential_Training.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_JavaScript_Essential_Training.jpg"
         },
         {
             certificationName: "Succeeding in Web Development: Full Stack and Front End",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Succeeding_in_Web_Development_Full_Stack_and_Front_End.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Succeeding_in_Web_Development_Full_Stack_and_Front_End.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Succeeding_in_Web_Development_Full_Stack_and_Front_End.jpg"
         },
         {
             certificationName: "Programming Foundations: Web Security 2019",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Programming_Foundations_Web_Security_2019.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Programming_Foundations_Web_Security_2019.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Programming_Foundations_Web_Security_2019.jpg"
         },
         {
             certificationName: "API Testing Foundations",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_API_Testing_Foundations.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_API_Testing_Foundations.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_API_Testing_Foundations.jpg"
         },
         {
             certificationName: "Selenium Essential Training",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Selenium_Essential_Training.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Selenium_Essential_Training.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Selenium_Essential_Training.jpg"
         },
         {
             certificationName: "Test Automation Foundations",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Test_Automation_Foundations.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Test_Automation_Foundations.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Test_Automation_Foundations.jpg"
         },
         {
             certificationName: "Programming Foundations: Software Testing/QA",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Programming_Foundations_Software_TestingQA.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Programming_Foundations_Software_TestingQA.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Programming_Foundations_Software_TestingQA.jpg"
         },
         {
             certificationName: "Developing Your Emotional Intelligence",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Developing_Your_Emotional_Intelligence.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Developing_Your_Emotional_Intelligence.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Developing_Your_Emotional_Intelligence.jpg"
         },
         {
             certificationName: "Career Essentials in Software Development by Microsoft and LinkedIn",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Career_Essentials_in_Software_Development_by_Microsoft_and_LinkedIn.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Career_Essentials_in_Software_Development_by_Microsoft_and_LinkedIn.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Career_Essentials_in_Software_Development_by_Microsoft_and_LinkedIn.jpg"
         },
         {
             certificationName: "Introduction to Career languages in Software Development",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_Introduction_to_Career_Skills_in_Software_Development.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_Introduction_to_Career_Skills_in_Software_Development.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_Introduction_to_Career_Skills_in_Software_Development.jpg"
         },
         {
             certificationName: "Problem Solving Techniques",
             image: "images/Certifications/LinkedInLearning/CertificateOfCompletion_ProblemSolving_Techniques.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/LinkedInLearning/CertificateOfCompletion_ProblemSolving_Techniques.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/LinkedInLearning/CertificateOfCompletion_ProblemSolving_Techniques.jpg"
         },
     ],
 
@@ -275,64 +275,64 @@ export const certifications = {
         {
             certificationName: "ETYC Interactive Robotics Programming Workshop 2022",
             image: "images/Certifications/FP_UNA/ETYC_Interactive_Robotics_Programming_Workshop_Certificate_of_Participation_2022.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/FP_UNA/ETYC_Interactive_Robotics_Programming_Workshop_Certificate_of_Participation_2022.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/FP_UNA/ETYC_Interactive_Robotics_Programming_Workshop_Certificate_of_Participation_2022.jpg"
         },
         {
             certificationName: "ETYC Programming Competition 2019",
             image: "images/Certifications/FP_UNA/ETYC_programing_competition_2019.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/FP_UNA/ETYC_programing_competition_2019.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/FP_UNA/ETYC_programing_competition_2019.jpg"
         },
         {
             certificationName: "ETYC Programming with Robots Workshop",
             image: "images/Certifications/FP_UNA/ETYC_Programing_with_robots_workshop.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/FP_UNA/ETYC_Programing_with_robots_workshop.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/FP_UNA/ETYC_Programing_with_robots_workshop.jpg"
         },
         {
             certificationName: "Ivan Weiss Van Der Pol Certificate TeamOps",
             image: "images/Certifications/FP_UNA/Ivan_Weiss_Van_Der_Pol_Certificate_TeamOps.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/FP_UNA/Ivan_Weiss_Van_Der_Pol_Certificate_TeamOps.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/FP_UNA/Ivan_Weiss_Van_Der_Pol_Certificate_TeamOps.jpg"
         },
         {
             certificationName: "Paraguay National Programming Competition Winners Announcement 2022",
             image: "images/Certifications/FP_UNA/Paraguay_National_Programming_Competition_Winners_Announcement_2022.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/FP_UNA/Paraguay_National_Programming_Competition_Winners_Announcement_2022.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/FP_UNA/Paraguay_National_Programming_Competition_Winners_Announcement_2022.jpg"
         },
         {
             certificationName: "Teampos Advanced Technical Training Certificate 2022",
             image: "images/Certifications/FP_UNA/Teampos_Advanced_Technical_Training_Certificate_2022.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/FP_UNA/Teampos_Advanced_Technical_Training_Certificate_2022.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/FP_UNA/Teampos_Advanced_Technical_Training_Certificate_2022.jpg"
         }
     ],
     educationalCertifications: [
         {
             certificationName: "FPUNA Grades 1",
             image: "images/Certifications/FP_UNA/FPUNA_grades-1.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/FP_UNA/FPUNA_grades-1.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/FP_UNA/FPUNA_grades-1.jpg"
         },
         {
             certificationName: "FPUNA Grades 2",
             image: "images/Certifications/FP_UNA/FPUNA_grades-2.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/FP_UNA/FPUNA_grades-2.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/FP_UNA/FPUNA_grades-2.jpg"
         },
         {
             certificationName: "ISTQB Foundation Level",
             image: "images/Certifications/Mentormate/Certificate-8e85e79dd27d41078da9908a53aaedb8_page-0001.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Mentormate/Certificate-8e85e79dd27d41078da9908a53aaedb8_page-0001.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Mentormate/Certificate-8e85e79dd27d41078da9908a53aaedb8_page-0001.jpg"
         },
         {
             certificationName: "Advanced English Proficiency Certificate BECAL Scholarship 2022",
             image: "images/Certifications/Personal/Ivan_Weiss_Advanced_English_Proficiency_Certificate_BECAL_Scholarship_2022.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Personal/Ivan_Weiss_Advanced_English_Proficiency_Certificate_BECAL_Scholarship_2022.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Personal/Ivan_Weiss_Advanced_English_Proficiency_Certificate_BECAL_Scholarship_2022.jpg"
         },
         {
             certificationName: "NASA International Space Apps Challenge",
             image: "images/Certifications/Personal/NASA_International_Space_Apps_Challenge.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Personal/NASA_International_Space_Apps_Challenge.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Personal/NASA_International_Space_Apps_Challenge.jpg"
         },
         {
             certificationName: "Agile Course Certificate",
             image: "images/Certifications/Personal/Agile_Course_certificate.jpg",
-            preview: "http://127.0.0.1:5500/images/Certifications/Personal/Agile_Course_certificate.jpg"
+            preview: "https://ivanweissvanderpol.github.io/images/Certifications/Personal/Agile_Course_certificate.jpg"
         }
     ]
 }
