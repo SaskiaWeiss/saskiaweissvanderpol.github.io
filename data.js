@@ -342,7 +342,7 @@ export const experience = [
     {
         title: "MentorMate",
         subtitle: "Quality Specialist II - Professional Development and Training",
-        duration: "January 2024 - Present",
+        duration: "August 2023 - Present",
         details: [
             "Engaged in a structured professional development program, enhancing knowledge in QA methodologies and compliance standards.",
             "Participated in multiple training programs and workshops, gaining proficiency in new tools and technologies including Postman, Charles Proxy, and MongoDB.",
@@ -355,7 +355,7 @@ export const experience = [
     {
         title: "MentorMate",
         subtitle: "Quality Specialist II - Flyte Project",
-        duration: "January 2024 - Present",
+        duration: "August  2023 - Present",
         details: [
             "Oversaw quality assurance for the Flyte Project, focusing on a webiste, a mobile application and an FDA-cleared device to improve women's pelvic health.",
             "Collaborated with developers and project managers to ensure seamless integration of new features, maintaining high-quality user experiences.",
@@ -367,7 +367,7 @@ export const experience = [
     },
     {
         title: "WPG.srl",
-        duration: "October 2018 - December 2023",
+        duration: "October 2018 - December 2022",
         subtitle: "QA Engineer and Software Developer",
         details: [
             "Performed comprehensive manual and automated testing, ensuring all new software applications met stringent quality standards before release.",
@@ -383,7 +383,7 @@ export const experience = [
 export const education = [
     {
         title: "Bachelor’s Degree in Computer Science",
-        duration: "2018 - 2025",
+        duration: "jan 2018 - present",
         subtitle: "Facultad Politécnica de la Universidad Nacional de Asunción (FP-UNA)",
         details: [
             "Completed a rigorous curriculum encompassing a wide range of computer science disciplines from fundamental theories to practical applications.",
@@ -417,7 +417,7 @@ export const education = [
     },
     {
         title: "Study Abroad Program",
-        duration: "2023",
+        duration: "jan 2023 - may 2023",
         subtitle: "Wichita State University, Kansas, USA",
         details: [
             "Improved technical communication and project management languages in a diverse cultural environment, working closely with students and faculty from various cultural backgrounds.",
