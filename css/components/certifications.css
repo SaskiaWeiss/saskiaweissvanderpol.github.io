@@ -1,0 +1,105 @@
+.certifications {
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.certifications .desc h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.certifications .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+.certifications .link:hover {
+    background: var(--primary-color-hover);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transform: translateY(-5px);
+}
+
+.certifications .link p {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.certifications .submenu {
+    display: none;
+    padding: 20px;
+    background: var(--light-color);
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.certifications .submenu.show {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.certifications .submenu .cert-item {
+    list-style: none;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--background-light);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.certifications .submenu .cert-item:hover {
+    background: var(--background-light-hover);
+}
+
+.certifications .submenu .cert-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.certifications .submenu .cert-item .cert-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.certifications .submenu .cert-item .cert-description {
+    color: var(--dark-color);
+    font-size: 1em;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .certifications .link p {
+        font-size: 1.2em;
+    }
+
+    .certifications .submenu .cert-item {
+        width: calc(50% - 10px);
+    }
+
+    .certifications .submenu .cert-item .cert-name {
+        font-size: 1.2em;
+    }
+}

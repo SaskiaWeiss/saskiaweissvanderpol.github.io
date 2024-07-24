@@ -16,7 +16,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="css/animate.css">
    <link rel="stylesheet" href="css/bootstrap.css">
-   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" type="text/css" href="css/pallete.css">
    
    <!-- Modernizr JS -->
@@ -31,7 +31,7 @@
       <div class="container-wrap">
          <a href="#" class="js-nav-toggle nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
          <!--------------------[START] Side Bar-------------------------->
-         <aside id="aside" role="complementary" class="border js-fullheight ">
+         <aside id="aside" role="complementary" class="border js-fullheight no-print">
             <div class="text-center">
                <div class="author-img">
                   <img alt="profile-img" src="images/logo_face.png">
@@ -62,19 +62,19 @@
          <!--------------------[START] Main Page------------------------->
          <div id="main">
             <!--------------------[START] About me-------------------------->
-            <section class="about section" data-section="about">
+            <section class="about" data-section="about">
                <div class="narrow-content">
                   <div class="row animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
+                     <div class="about-desc">
                         <h1>About</h1>
-                        <div id="bio" class="about-bio"></div>
+                        <div id="bio"></div>
                      </div>
                   </div>
                </div>
             </section>
             <!--------------------[END] About me---------------------------->
             <!--------------------[START] prof summary------------------------>
-            <section class="profile section" data-section="profile-card">
+            <section class="profile" data-section="profile-card">
                <div class="narrow-content">
                   <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                      <div class="profile-cards">
@@ -85,10 +85,10 @@
             </section>
             <!--------------------[END] prof summary-------------------------->
             <!--------------------[START] languages---------------------------->
-            <section class="languages section" data-section="languages">
+            <section class="languages" data-section="languages">
                <div class="narrow-content">
                   <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
+                     <div class="about-desc">
                         <h1>Languages</h1>
                      </div>
                   </div>
@@ -97,34 +97,34 @@
             </section>
             <!--------------------[END] languages------------------------------>
             <!--------------------[START] Skills-------------------------->
-            <section class="skills section" data-section="skills">
+            <section class="certifications no-print" data-section="skills">
                <div class="narrow-content">
                   <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
+                     <div class="about-desc">
                         <h1>Skills</h1>
                      </div>
                   </div>
-                  <ul id="skills-list" class="" data-animate-effect="fadeInLeft"></ul>
+                  <ul id="skills-list" class="accordion animate-box" data-animate-effect="fadeInLeft"></ul>
                </div>
             </section>
             <!--------------------[END] Skills---------------------------->
             <!--------------------[START] Certifications-------------------------->
-            <section class="certifications section" data-section="certifications">
+            <section class="certifications no-print" data-section="certifications">
                <div class="narrow-content">
                   <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
+                     <div class="about-desc">
                         <h1>Certifications</h1>
                      </div>
                   </div>
-                  <ul id="cert-list" class="" data-animate-effect="fadeInLeft"></ul>
+                  <ul id="accordion" class="accordion animate-box" data-animate-effect="fadeInLeft"></ul>
                </div>
             </section>
             <!--------------------[END] Certifications---------------------------->
             <!--------------------[START] Work Experience------------------->
-            <section class="experience section" data-section="experience">
+            <section class="experience" data-section="experience">
                <div class="narrow-content">
                   <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-                     <div class="desc">
+                     <div class="about-desc">
                         <h1>Work <span class="highlightedText">Experience</span></h1>
                      </div>
                   </div>
@@ -133,10 +133,10 @@
             </section>
             <!--------------------[END] Work Experience--------------------->
             <!--------------------[START] Education------------------------->
-            <section class="education section" data-section="education">
+            <section class="education" data-section="education">
                <div class="narrow-content">
                   <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-                     <div class="desc">
+                     <div class="about-desc">
                         <h1>Education</h1>
                      </div>
                   </div>
@@ -145,10 +145,10 @@
             </section>
             <!--------------------[END] Education--------------------------->
             <!--------------------[START] Testimonials------------------------->
-            <section class="testimonials section" data-section="testimonials">
+            <section class="testimonials" data-section="testimonials">
                <div class="narrow-content">
                  <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-                   <div class="desc">
+                   <div class="about-desc">
                      <h1 style="font-size: 2.5em; font-weight: bold; color: var(--primary-color);">Testimonials</h1> <!-- Enhanced Title -->
                    </div>
                  </div>
@@ -167,10 +167,10 @@
              
             <!--------------------[END] Testimonials--------------------------->
             <!--------------------[START] Contact--------------------------->
-            <section class="contact section" data-section="contact">
+            <section class="contact" data-section="contact">
                <div class="narrow-content">
                   <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                     <div class="desc">
+                     <div class="about-desc">
                         <h1>Contact</h1>
                      </div>
                      <p id="contact-info"></p>
@@ -179,8 +179,8 @@
             </section>
             <!--------------------[END] Contact----------------------------->
             <!--------------------[START] Footer---------------------------->
-            <section class="footer section" data-section="footer">
-               
+            <section class="footer no-print" data-section="footer">
+               <div class="narrow-content">
                    <footer class="footer" id="footer">
                        <!-- Existing footer content will be populated here -->
                    </footer>
@@ -188,6 +188,7 @@
                        <p>Made with ♥ by IvanWeissVanDerPol.</p>
                        <p>© No Copyrights. Feel free to use this template.</p>
                    </div>
+               </div>
            </section>
             <!--------------------[END] Footer------------------------------>
          </div>
@@ -209,5 +210,43 @@
    <script src="js/jquery.countTo.js"></script>
    <!-- MAIN JS -->
    <script src="js/main.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 </html>
