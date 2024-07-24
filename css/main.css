@@ -19,6 +19,9 @@
 	--title-color: var(--secondary-color);
 	--color: var(--background-dark);
 	--color-smooth: var(--background-dark);
+    --font-primary: "Quicksand", Arial, sans-serif; /* Modern sans-serif for body text */
+	--font-secondary: "Montserrat", sans-serif; /* Geometric sans-serif for headings */
+	--font-tertiary: "Playfair Display", Georgia, serif; /* Elegant serif for titles */
 }
 section {
     background-color: var(--background-lighter);

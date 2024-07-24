@@ -17,63 +17,76 @@ footer ul {
 	list-style: none;
 	padding-left: 0px;
 }
-.footer a {
+/* Uniform Styling for Links */
+footer a {
 	cursor: pointer;
-	text-decoration: underline;
+	text-decoration: none;
 	color: var(--primary-color);
 	transition: color 0.3s, background-color 0.3s, transform 0.3s;
 	padding: 10px;
 	border-radius: 4px;
 	display: flex;
 	align-items: center;
+	/* Icon consistency */
+	display: flex;
+	align-items: center;
 }
-.footer a:hover {
+footer a i {
+	margin-right: 8px;
+}
+footer a:hover {
 	color: #fff;
 	background-color: var(--primary-color);
 	transform: scale(1.05);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.footer a i {
-	margin-right: 8px;
-}
-.footer-notes {
-	text-align: center;
-	font-size: 12px;
-	margin-top: -5px;
-	color: rgba(255, 255, 255, 0.7);
-	width: 100%;
-	padding: 10px 0;
-	background-color: var(--background-light);
-}
-.footer-intro {
-	text-align: left;
-	font-size: 25px;
-	margin-top: -5px;
-	color: var(--primary-color);
-	font-weight: bold;
-	width: 100%;
-	padding: 10px 0;
-	background-color: var(--background-light);
-}
-.col {
+/* Better Alignment and Spacing */
+footer .col {
 	flex: 1;
-	display: inline-grid;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 1em;
 }
-.col-title {
+footer .col-title {
 	color: var(--primary-color);
 	font-size: 1.2em;
 	font-weight: 600;
 	margin: 0;
 }
-.col-list a {
+footer .col-list a {
 	color: var(--secondary-color);
 	text-decoration: none;
 	line-height: 1.4;
 	font-weight: 400;
 	cursor: pointer;
 }
-.col-list a:hover, .col-list a:focus {
+footer .col-list a:hover, footer .col-list a:focus {
 	text-decoration: underline;
+}
+/* Highlight Headings */
+footer h2 {
+	font-size: 1.75em; /* Slightly larger font size */
+	font-weight: bold; /* Bold weight */
+}
+/* Consistent Button Styles */
+footer .button {
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+}
+footer .button:hover {
+	background-color: var(--primary-color-hover);
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Add Icons */
+footer .button i {
+	margin-right: 8px;
 }
 .copyright-text {
 	text-align: center;

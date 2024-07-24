@@ -24,9 +24,6 @@
 	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #8ecae6;
 	--info-color-hover: #2ec4b6; /* Added */
-	--font-primary: "Quicksand", Arial, sans-serif;
-	--font-secondary: "Montserrat", sans-serif;
-	--font-tertiary: "Playfair Display", Georgia, serif;
 	--input-border: #3a456a;
 	--btn-bg-color: #f1f2fc;
 	--btn-hover-bg: #d5d9f6;
@@ -34,7 +31,6 @@
     --aside-width: 300px;
     --spacing: 3em;
     --mobile-spacing: 1em;
-
 }
 
 /* Ocean Breeze Theme */
@@ -63,9 +59,6 @@
 	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #8ecae6;
 	--info-color-hover: #2ec4b6; /* Added */
-	--font-primary: "Quicksand", Arial, sans-serif;
-	--font-secondary: "Montserrat", sans-serif;
-	--font-tertiary: "Playfair Display", Georgia, serif;
 	--input-border: #3a456a;
 	--btn-bg-color: #f1f2fc;
 	--btn-hover-bg: #d5d9f6;
@@ -74,8 +67,6 @@
     --spacing: 3em;
     --mobile-spacing: 1em;
 
-
-	
 }
 
 /* Sunset Glow Theme */
@@ -104,9 +95,6 @@
 	--warning-color-hover: #f4a261; /* Added */
 	--info-color: #2ec4b6;
 	--info-color-hover: #457b9d; /* Added */
-	--font-primary: "Quicksand", Arial, sans-serif;
-	--font-secondary: "Montserrat", sans-serif;
-	--font-tertiary: "Playfair Display", Georgia, serif;
 	--input-border: #3a456a;
 	--btn-bg-color: #f1f2fc;
 	--btn-hover-bg: #d5d9f6;
@@ -115,8 +103,6 @@
     --spacing: 3em;
     --mobile-spacing: 1em;
 
-
-	
 }
 
 /* Forest Harmony Theme */
@@ -145,9 +131,6 @@
 	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #457b9d;
 	--info-color-hover: #2ec4b6; /* Added */
-	--font-primary: "Quicksand", Arial, sans-serif;
-	--font-secondary: "Montserrat", sans-serif;
-	--font-tertiary: "Playfair Display", Georgia, serif;
 	--input-border: #3a456a;
 	--btn-bg-color: #f1f2fc;
 	--btn-hover-bg: #d5d9f6;
@@ -156,8 +139,6 @@
     --spacing: 3em;
     --mobile-spacing: 1em;
 
-
-	
 }
 
 /* Desert Mirage Theme */
@@ -186,9 +167,6 @@
 	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #457b9d;
 	--info-color-hover: #2ec4b6; /* Added */
-	--font-primary: "Quicksand", Arial, sans-serif;
-	--font-secondary: "Montserrat", sans-serif;
-	--font-tertiary: "Playfair Display", Georgia, serif;
 	--input-border: #3a456a;
 	--btn-bg-color: #f1f2fc;
 	--btn-hover-bg: #d5d9f6;
@@ -197,8 +175,6 @@
     --spacing: 3em;
     --mobile-spacing: 1em;
 
-
-	
 }
 
 /* Midnight Sky Theme */
@@ -227,9 +203,6 @@
 	--warning-color-hover: #ffca3a; /* Added */
 	--info-color: #3a86ff;
 	--info-color-hover: #457b9d; /* Added */
-	--font-primary: "Quicksand", Arial, sans-serif;
-	--font-secondary: "Montserrat", sans-serif;
-	--font-tertiary: "Playfair Display", Georgia, serif;
 	--input-border: #3a456a;
 	--btn-bg-color: #f1f2fc;
 	--btn-hover-bg: #d5d9f6;
@@ -238,6 +211,6 @@
     --spacing: 3em;
     --mobile-spacing: 1em;
 
-
-	
 }
+
+
