@@ -163,7 +163,7 @@ function createExperienceItem(experience) {
     timelineInner.className = 'timeline-entry-inner';
 
     const timelineIcon = document.createElement('div');
-    timelineIcon.className = 'timeline-icon';
+    timelineIcon.className = 'timeline-icon color-3';
 
     if (project_logo && project_logo !== "") {
         const projectLogo = document.createElement('img');
@@ -238,7 +238,7 @@ function createEducationItem(education) {
     timelineInner.className = 'timeline-entry-inner';
 
     const timelineIcon = document.createElement('div');
-    timelineIcon.className = 'timeline-icon';
+    timelineIcon.className = 'timeline-icon color-3';
     const iconElement = document.createElement('i');
     iconElement.className = `fa ${icon}`;
     timelineIcon.appendChild(iconElement);
