@@ -90,29 +90,24 @@ function createSkillItem(skill) {
     const listItem = document.createElement('li');
     listItem.className = 'skill-item';
 
-    const imageContainer = document.createElement('div');
     if (imagePath) {
         const image = document.createElement('img');
         image.className = 'skill-logo';
         image.setAttribute('src', imagePath);
         image.setAttribute('alt', `Logo of ${skillName}`);
         image.setAttribute('loading', 'lazy');
-        imageContainer.appendChild(image);
+        listItem.appendChild(image);
     }
-    listItem.appendChild(imageContainer);
 
-    const textContainer = document.createElement('div');
     const skillNameSpan = document.createElement('span');
     skillNameSpan.className = 'skill-name';
     skillNameSpan.textContent = skillName;
-    textContainer.appendChild(skillNameSpan);
+    listItem.appendChild(skillNameSpan);
 
     const descriptionP = document.createElement('p');
     descriptionP.className = 'skill-description';
     descriptionP.textContent = description || '';  // Set to empty string if no description
-    textContainer.appendChild(descriptionP);
-
-    listItem.appendChild(textContainer);
+    listItem.appendChild(descriptionP);
 
     return listItem;
 }
@@ -122,7 +117,7 @@ function createCertificationItem(certification) {
     const { certificationName = '', image = '', preview = '#', description = '' } = certification || {};
 
     const certificationCard = document.createElement('li');
-    certificationCard.className = 'cert-item';
+    certificationCard.className = 'skill-item';
 
     const link = document.createElement('a');
     link.setAttribute('href', preview);
@@ -133,14 +128,14 @@ function createCertificationItem(certification) {
         const img = document.createElement('img');
         img.setAttribute('src', image);
         img.setAttribute('alt', `Image of ${certificationName}`);
-        img.setAttribute('class', 'cert-img');
+        img.setAttribute('class', 'certification-img');
         img.setAttribute('loading', 'lazy');
         link.appendChild(img);
     }
 
     const nameElement = document.createElement('h4');
     nameElement.textContent = certificationName;
-    nameElement.className = 'cert-name';
+    nameElement.className = 'skill-name';
     link.appendChild(nameElement);
 
     if (description) {
@@ -154,7 +149,7 @@ function createCertificationItem(certification) {
 
 function createExperienceItem(experience) {
     if (enableLogging) console.log('Creating experience item:', experience);
-    const { title, subtitle, duration, details, tags, icon, institution_logo, project_logo, institution_website } = experience;
+    const { title, subtitle, duration, details, tags, icon } = experience;
 
     const experienceEntry = document.createElement('article');
     experienceEntry.className = 'timeline-entry animate-box fadeInUp animated';
@@ -164,22 +159,9 @@ function createExperienceItem(experience) {
 
     const timelineIcon = document.createElement('div');
     timelineIcon.className = 'timeline-icon color-3';
-
-    if (project_logo && project_logo !== "") {
-        const projectLogo = document.createElement('img');
-        projectLogo.setAttribute('src', project_logo);
-        projectLogo.setAttribute('alt', 'Project Logo');
-        projectLogo.setAttribute('class', 'work-logo');
-        timelineIcon.appendChild(projectLogo);
-    }
-
-    if (institution_logo && institution_logo !== "") {
-        const institutionLogo = document.createElement('img');
-        institutionLogo.setAttribute('src', institution_logo);
-        institutionLogo.setAttribute('alt', 'Institution Logo');
-        institutionLogo.setAttribute('class', 'work-logo');
-        timelineIcon.appendChild(institutionLogo);
-    }
+    const iconElement = document.createElement('i');
+    iconElement.className = `fa ${icon}`;
+    timelineIcon.appendChild(iconElement);
 
     const timelineLabel = document.createElement('div');
     timelineLabel.className = 'timeline-label';
@@ -208,17 +190,6 @@ function createExperienceItem(experience) {
         tagsDiv.appendChild(tagSpan);
     });
     timelineLabel.appendChild(tagsDiv);
-
-    if (Array.isArray(institution_website)) {
-        const websiteDiv = document.createElement('div');
-        institution_website.forEach(website => {
-            const websiteLink = document.createElement('a');
-            websiteLink.setAttribute('href', website.url);
-            websiteLink.textContent = website.urlText;
-            websiteDiv.appendChild(websiteLink);
-        });
-        timelineLabel.appendChild(websiteDiv);
-    }
 
     timelineInner.appendChild(timelineIcon);
     timelineInner.appendChild(timelineLabel);
@@ -307,78 +278,52 @@ function createTestimonialElement(testimonial, isActive) {
     return wrapper;
 }
 
-
 function createFooterItem(item) {
     if (enableLogging) console.log('Creating footer item:', item);
-    const { intro_text, footer_links } = item;
+    const { label, data } = item;
 
-    // Create a container for the footer item
-    const footerDiv = document.createElement('div');
-    footerDiv.className = 'footer';
-
-    // If there's an intro_text, create a div for it
-    if (intro_text) {
-        const introDiv = document.createElement('div');
-        introDiv.className = 'footer-intro'; // Add a class for styling
-        introDiv.textContent = intro_text; // Set the intro text
-        footerDiv.appendChild(introDiv); // Append intro text to the footer
-    }
-
-    // Create the navigation for the footer
-    footer_links.forEach(linkGroup => {
+    if (label === "copyright-text") {
+        const copyrightDiv = document.createElement('div');
+        data.forEach(text => {
+            const paragraph = document.createElement('p');
+            paragraph.innerHTML = text;
+            copyrightDiv.appendChild(paragraph);
+        });
+        return copyrightDiv;
+    } else {
         const colDiv = document.createElement('div');
         colDiv.className = 'col';
 
-        // Create the column title
-        if (linkGroup.label) {
-            const colTitle = document.createElement('p');
-            colTitle.className = 'col-title';
-            colTitle.textContent = linkGroup.label;
-            colDiv.appendChild(colTitle);
-        }
+        const colTitle = document.createElement('p');
+        colTitle.className = 'col-title';
+        colTitle.textContent = label;
+        colDiv.appendChild(colTitle);
 
-        // Create the navigation for the column
         const nav = document.createElement('nav');
         nav.className = 'col-list';
         const ul = document.createElement('ul');
-
-        // Check if data is defined before calling forEach
-        if (linkGroup.data && Array.isArray(linkGroup.data)) {
-            // Populate the list with links
-            linkGroup.data.forEach(linkItem => {
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.textContent = linkItem.text;
-                if (linkItem.link) {
-                    a.setAttribute('href', linkItem.link);
-                    if (linkItem.target) {
-                        a.setAttribute('target', linkItem.target);
-                    }
+        data.forEach(linkItem => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.textContent = linkItem.text;
+            if (linkItem.link) {
+                a.setAttribute('href', linkItem.link);
+                if (linkItem.target) {
+                    a.setAttribute('target', linkItem.target);
                 }
-                if (linkItem.icon) {
-                    const icon = document.createElement('i');
-                    icon.className = `fa ${linkItem.icon}`; // Add icon class
-                    a.prepend(icon); // Add icon before the text
-                }
-                if (linkItem.cta) {
-                    const ctaSpan = document.createElement('span');
-                    ctaSpan.textContent = ` (${linkItem.cta})`; // Add CTA text
-                    a.appendChild(ctaSpan); // Append CTA to the link
-                }
-                li.appendChild(a);
-                ul.appendChild(li);
-            });
-        } else {
-            if (enableLogging) console.warn('Data is not defined or is not an array for footer item:', item);
-        }
+            }
+            if (linkItem.func) {
+                a.addEventListener('click', window[linkItem.func]);
+            }
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
         nav.appendChild(ul);
         colDiv.appendChild(nav);
-        footerDiv.appendChild(colDiv); // Append the column div to the footer div
-    });
 
-    return footerDiv; // Return the constructed footer div
+        return colDiv;
+    }
 }
-
 
 /**
  * Create and return a GitHub card element.
@@ -393,30 +338,7 @@ function createGitHubCard(username) {
 /**
  * Create and return a category element.
  */
-function createCategoryElement_certifications(categoryName, items, createItemCallback) {
-    if (enableLogging) console.log('Creating category element:', categoryName);
-    const listItem = createElement('li');
-    const linkDiv = createElement('div', { className: 'link', children: [['p', { text: categoryName, style: 'margin-bottom: 0px; cursor: pointer;' }]] });
-    const sublist = createElement('ul', { className: 'submenu', style: 'display: none;' });
-
-    listItem.appendChild(linkDiv);
-    listItem.appendChild(sublist);
-
-    // Populate the sublist with items
-    items.forEach(item => {
-        sublist.appendChild(createItemCallback(item));
-    });
-
-    // Add click event to toggle the submenu display
-    linkDiv.addEventListener('click', () => {
-        const isDisplayed = sublist.style.display === 'flex' || sublist.style.display === '';
-        sublist.style.display = isDisplayed ? 'none' : 'flex';
-    });
-
-    return listItem;
-}
-
-function createCategoryElement_skills(categoryName, items, createItemCallback) {
+function createCategoryElement(categoryName, items, createItemCallback) {
     if (enableLogging) console.log('Creating category element:', categoryName);
     const listItem = createElement('li');
     const linkDiv = createElement('div', { className: 'link', children: [['p', { text: categoryName, style: 'margin-bottom: 0px; cursor: pointer;' }]] });
@@ -499,7 +421,7 @@ function populateSkillsAccordion(containerId, skills, enableLogging = false) {
     const skillsAccordion = document.getElementById(containerId);
     Object.keys(skills).forEach(category => {
         if (skills[category]) {
-            const categoryElement = createCategoryElement_skills(category.replace(/_/g, ' '), skills[category], createSkillItem);
+            const categoryElement = createCategoryElement(category.replace(/_/g, ' '), skills[category], createSkillItem);
             skillsAccordion.appendChild(categoryElement);
         } else {
             if (enableLogging) console.warn(`Undefined skill category: ${category}`);
@@ -511,7 +433,7 @@ function populateCertificationsAccordion(containerId, certifications, enableLogg
     const certificationsAccordion = document.getElementById(containerId);
     Object.keys(certifications).forEach(category => {
         if (certifications[category]) {
-            const categoryElement = createCategoryElement_certifications(category.replace(/_/g, ' '), certifications[category], createCertificationItem);
+            const categoryElement = createCategoryElement(category.replace(/_/g, ' '), certifications[category], createCertificationItem);
             certificationsAccordion.appendChild(categoryElement);
         } else {
             if (enableLogging) console.warn(`Undefined certification category: ${category}`);
@@ -548,10 +470,10 @@ document.addEventListener("DOMContentLoaded", () => {
         populateContainer('languages', languages, createLanguageSkillElement);
 
         // Populate skills accordion
-        populateSkillsAccordion('skills-list', skills, enableLogging);
+        populateSkillsAccordion('skills-accordion', skills, enableLogging);
 
         // Populate certifications accordion
-        populateCertificationsAccordion('cert-list', certifications, enableLogging);
+        populateCertificationsAccordion('accordion', certifications, enableLogging);
 
         // Populate experience
         populateContainer('experience', experience, createExperienceItem);
@@ -570,7 +492,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } catch (error) {
         console.error(`Error during initialization: ${error.message}`);
-        console.error(`Error occurred at line: ${error.lineNumber}, column: ${error.columnNumber}`);
-        console.error(`Stack trace: ${error.stack}`);
     }
 });
