@@ -1,4 +1,4 @@
-export const githubUsername = ""; // No GitHub username provided
+export const githubUsername = "SaskiaWeiss"; // No GitHub username provided
 
 // Personal Information
 export const Name = "Saskia"; 
